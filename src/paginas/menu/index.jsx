@@ -29,7 +29,7 @@ export default function Menu() {
         if (card1) {
             const timeoutId = setTimeout(() => {
                 setCard2(true);
-            }, 800);
+            }, 300);
             return () => clearTimeout(timeoutId);
         }
     }, [card1])
