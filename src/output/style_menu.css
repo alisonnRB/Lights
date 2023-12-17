@@ -1,0 +1,91 @@
+.menu {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../drawble/texture_menu.png");
+  background-size: 1366px 768px;
+}
+.menu .light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 0px 0px 100vw 50vw black;
+  animation: acende 0.7s linear;
+}
+.menu .card-menu-about {
+  z-index: 0;
+  height: 309px;
+  width: 543.5px;
+  background-image: url("../drawble/texture_card_about.png");
+  background-size: 700px 350px;
+  display: block;
+  position: relative;
+  left: 25%;
+  top: 10%;
+  box-shadow: -5px 5px 8px 0px rgba(0, 0, 0, 0.4039215686), inset -5px 5px 20px 0px rgba(255, 255, 255, 0.2941176471);
+}
+.menu .card-menu-about .top {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.menu .card-menu-about .top .about-box {
+  height: 70%;
+  width: 20%;
+}
+.menu .card-menu-about .top .about-box p {
+  font-size: 0.6em;
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-bottom: solid 1px #5F534E;
+  transform: rotate(270deg);
+  position: relative;
+  left: calc(57% - 1em);
+  top: 30%;
+}
+.menu .card-menu-about .top .content-about-text {
+  height: 70%;
+  width: 60%;
+  font-size: 0.7em;
+}
+.menu .card-menu-about .bottom {
+  height: 25%;
+  width: 100%;
+}
+.menu .card-menu-about .bottom p {
+  border-top: solid 2px rgba(95, 83, 78, 0.5960784314);
+  margin-left: 8%;
+  margin-right: 8%;
+}
+.menu .card-menu-projects {
+  z-index: 10;
+  height: 216px;
+  width: 422.5px;
+  background-image: url("../drawble/texture_card_projects.png");
+  background-size: 700px 350px;
+  display: block;
+  position: relative;
+  left: 48%;
+  top: -5%;
+  box-shadow: -5px 5px 8px 0px rgba(0, 0, 0, 0.4039215686), inset -5px 5px 20px 0px rgba(255, 255, 255, 0.2941176471);
+}
+
+@keyframes acende {
+  0% {
+    box-shadow: inset 0px 0px 100vw 50vw black;
+  }
+  80% {
+    box-shadow: inset 0px 0px 80vh 0vh black;
+  }
+  100% {
+    box-shadow: inset 0px 0px 0vw 0vw black;
+  }
+}
+
+/*# sourceMappingURL=style_menu.css.map */
