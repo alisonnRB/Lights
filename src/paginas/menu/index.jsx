@@ -4,18 +4,31 @@ import '../../output/style_menu.css';
 export default function Menu() {
     const [open, setOpen] = useState(false);
 
+    const [card1, setCard1] = useState(false);
+    const [card2, setCard2] = useState(false);
+
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setOpen(true);
-        }, 700);
+            setCard1(true);
+        }, 90);
         return () => clearTimeout(timeoutId);
     }, [])
+
+    useEffect(() => {
+        if (card1) {
+            const timeoutId = setTimeout(() => {
+                setCard2(true);
+            }, 800);
+            return () => clearTimeout(timeoutId);
+        }
+    }, [card1])
 
     return (
         <div className="menu">
             {!open ? <div className='light'></div> : null}
 
-            <div className="card-menu-about">
+            {card1 ? <div className="card-menu-about">
                 <div className="top">
                     <div className="about-box">
                         <p>ABOUT ME</p>
@@ -31,11 +44,18 @@ export default function Menu() {
                 </div>
 
                 <div className="bottom">
-                    <p></p>
+                    <p>My skills</p>
                 </div>
-            </div>
+            </div> : null}
 
-            <div className="card-menu-projects"></div>
+            {card2 ? <div className="card-menu-projects">
+                <p className="number-box">02</p>
+                <p className="title-box">PROJECTS</p>
+
+                <div className="content-see">
+                    <p>See my projects</p>
+                </div>
+            </div> : null}
 
         </div>
     );

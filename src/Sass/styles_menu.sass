@@ -3,6 +3,7 @@
     width: 100vw
     background-image: url('../drawble/texture_menu.png')
     background-size: 1366px 768px
+    overflow: hidden
 
     .light
         position: fixed
@@ -12,7 +13,7 @@
         height: 100%
         width: 100%
         box-shadow: inset 0px 0px 100vw 50vw black
-        animation: acende .7s linear
+        animation: acende .1s linear
 
     .card-menu-about
         z-index: 0
@@ -25,6 +26,7 @@
         left: 25%
         top: 10%
         box-shadow: -5px 5px 8px 0px #00000067, inset -5px 5px 20px 0px #ffffff4b
+        animation: chegando .7s linear
 
         .top
             height: 75%
@@ -53,7 +55,7 @@
                 height: 70%
                 width: 60%
                 font-size: .7em
-        
+
         .bottom
             height: 25%
             width: 100%
@@ -62,6 +64,9 @@
                 border-top: solid 2px #5f534e98
                 margin-left: 8%
                 margin-right: 8%
+                padding-left: 15px
+                padding-top: 5px
+                cursor: pointer
 
     .card-menu-projects
         z-index: 10
@@ -74,6 +79,33 @@
         left: 48%
         top: -5%
         box-shadow: -5px 5px 8px 0px #00000067, inset -5px 5px 20px 0px #ffffff4b
+        padding-left: 2%
+        padding-right: 2%
+        animation: chegando2 .4s linear
+
+        .number-box
+            height: 15%
+            font-size: .5em
+            display: flex
+            align-items: end
+            border-bottom: solid 2px #5f534e98
+            padding-bottom: 2px
+
+        .title-box
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 5px
+            border-bottom: solid 2px #5f534e98
+
+        .content-see
+            height: calc( 70% - 20px)
+            display: flex
+            align-items: center
+            justify-content: center
+
+            p
+                cursor: pointer
 
 @keyframes acende
     0%
@@ -84,3 +116,21 @@
 
     100%
         box-shadow: inset 0px 0px 0vw 0vw black
+
+@keyframes chegando
+    0%
+        transform: translateY(-100%) translateX(-100%) rotate(20deg)
+        box-shadow: -45px 45px 30px 40px #00000067, inset 0px 0px 0px 0px #ffffff4b
+
+    100%
+        transform: translateY(0) translateX(0) rotate(0)
+        box-shadow: -5px 5px 8px 0px #00000067, inset -5px 5px 20px 0px #ffffff4b
+
+@keyframes chegando2
+    0%
+        transform: translateY(100%) translateX(100%) rotate(20deg)
+        box-shadow: -35px 35px 30px 30px #00000067, inset 0px 0px 0px 0px #ffffff4b
+
+    100%
+        transform: translateY(0) translateX(0) rotate(0)
+        box-shadow: -5px 5px 8px 0px #00000067, inset -5px 5px 20px 0px #ffffff4b
