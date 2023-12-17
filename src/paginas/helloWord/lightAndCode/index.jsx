@@ -17,7 +17,7 @@ export default function Light_and_code() {
     }, []);
 
     useEffect(() => {
-        if(escreve){
+        if (escreve) {
             const timeoutId = setTimeout(() => {
                 setEscreve(false);
             }, 6800);
@@ -25,16 +25,20 @@ export default function Light_and_code() {
             const Timer = setTimeout(() => {
                 setMove(true);
             }, 7000);
-   
-            return () => clearTimeout(timeoutId); 
+
+            return () => clearTimeout(timeoutId);
         }
     }, [escreve]);
 
-    useEffect(()=>{
-        if(move){
-            navigate('/Menu');
+    useEffect(() => {
+        if (move) {
+            const timeoutId = setTimeout(() => {
+                navigate('/Menu');
+            }, 1000);
+
+            return () => clearTimeout(timeoutId);
         }
-    },[move])
+    }, [move])
 
     return (
         <div className="light">

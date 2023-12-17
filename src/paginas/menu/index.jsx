@@ -10,10 +10,20 @@ export default function Menu() {
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setOpen(true);
-            setCard1(true);
-        }, 90);
+            
+        }, 900);
         return () => clearTimeout(timeoutId);
     }, [])
+
+    useEffect(() => {
+        if (open) {
+            const timeoutId = setTimeout(() => {
+                setCard1(true);
+            }, 300);
+
+            return () => clearTimeout(timeoutId);
+        }
+    }, [open])
 
     useEffect(() => {
         if (card1) {
