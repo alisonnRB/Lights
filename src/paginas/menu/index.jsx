@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import '../../output/style_menu.css';
 
 import Paw from "./paw";
 
 export default function Menu() {
     const [open, setOpen] = useState(false);
+    const [turn, setTurn] = useState(false);
 
     const [card1, setCard1] = useState(false);
     const [card2, setCard2] = useState(false);
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setOpen(true);
-            
+
         }, 900);
         return () => clearTimeout(timeoutId);
     }, [])
@@ -36,12 +41,28 @@ export default function Menu() {
         }
     }, [card1])
 
+    const Navigate_mySkills = () => {
+        setTurn(true);
+        setOpen(false);
+
+        const timeoutId = setTimeout(() => {
+            navigate('/menu/mySkills');
+        }, 500);
+
+        return () => clearTimeout(timeoutId);
+
+    }
+
+    const Navigate_myProjects = () => {
+
+    }
+
     return (
         <div className="menu">
 
             <Paw />
-            
-            {!open ? <div className='light'></div> : null}
+
+            {!open ? <div className={`light ${turn ? 'off' : null}`}></div> : null}
 
             {card1 ? <div className="card-menu-about">
                 <div className="top">
@@ -59,7 +80,7 @@ export default function Menu() {
                 </div>
 
                 <div className="bottom">
-                    <p>My skills</p>
+                    <p onClick={() => { Navigate_mySkills() }}>My skills</p>
                 </div>
             </div> : null}
 
@@ -68,7 +89,7 @@ export default function Menu() {
                 <p className="title-box">PROJECTS</p>
 
                 <div className="content-see">
-                    <p>See my projects</p>
+                    <p onClick={() => { Navigate_myProjects() }}>See my projects</p>
                 </div>
             </div> : null}
 

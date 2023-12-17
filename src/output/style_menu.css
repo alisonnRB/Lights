@@ -14,6 +14,9 @@
   box-shadow: inset 0px 0px 100vw 50vw black;
   animation: acende 1s linear;
 }
+.menu .light.off {
+  animation: acende 0.5s linear reverse;
+}
 .menu .card-menu-about {
   z-index: 0;
   height: 309px;
