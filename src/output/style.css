@@ -4,6 +4,7 @@
   font-family: "forum";
   font-size: 1.1em;
   color: #474944;
+  box-sizing: border-box;
 }
 
 .home {
@@ -77,6 +78,64 @@
 }
 .home .botao.off .letter-braille {
   box-shadow: inset 0.05px -0.05px 2px -1px rgba(71, 73, 68, 0.5568627451), inset -0.05px 0.05px 3px -1px rgba(241, 241, 241, 0.631372549);
+}
+.home .light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  animation: apaga 0.7s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .light .hello {
+  color: rgba(255, 255, 255, 0.7411764706);
+  font-size: 2em;
+  margin: 0 auto;
+  border-right: solid 2px rgba(255, 255, 255, 0.7411764706);
+  padding-right: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.home .light .hello.cursor {
+  animation: cursor 0.8s linear infinite, typing 1.5s ease;
+  animation-timing-function: steps(12, end);
+}
+
+@keyframes apaga {
+  0% {
+    opacity: 0;
+    box-shadow: inset 0px 0px 0px 0px black;
+  }
+  100% {
+    opacity: 1;
+    box-shadow: inset 0px 0px 100vh 0px black;
+  }
+}
+@keyframes cursor {
+  0% {
+    border-right: solid 2px rgba(255, 255, 255, 0.7411764706);
+  }
+  50% {
+    border-right: solid 2px rgba(255, 255, 255, 0.7411764706);
+  }
+  50.5% {
+    border-right: solid 2px rgba(255, 255, 255, 0);
+  }
+  100% {
+    border-right: solid 2px rgba(255, 255, 255, 0);
+  }
+}
+@keyframes typing {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 7em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

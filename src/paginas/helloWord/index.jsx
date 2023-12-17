@@ -1,15 +1,18 @@
 import React from "react";
-import Letra_braille from "./braille";
 import { useState, useEffect } from "react";
+
+import Letra_braille from "./braille";
+import Light_and_code from "./lightAndCode";
 
 export default function Home() {
     const [turn, setTurn] = useState(true);
+    const [code, setCode] = useState(false);
 
     useEffect(() => {
         if (!turn) {
           const timeoutId = setTimeout(() => {
-            console.log('apagou');
-          }, 2000);
+            setCode(true);
+          }, 100);
           return () => clearTimeout(timeoutId);
         }
       }, [turn]);
@@ -28,6 +31,8 @@ export default function Home() {
             </div>
 
             <p className="apresentation">My name is Álison, nice to meet you!</p>
+
+            {code ? <Light_and_code /> : null}
         </div>
     );
 }

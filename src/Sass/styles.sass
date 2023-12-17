@@ -4,6 +4,7 @@
     font-family: 'forum'
     font-size: 1.1em
     color: #474944
+    box-sizing: border-box
 
 .home
     height: 100vh
@@ -69,10 +70,64 @@
                     width: 5px
                     border-radius: 50%
                     box-shadow: inset .2px -0.2px 2px -1px #474944ea, inset -0.2px .2px 2px -1px #f1f1f1a1
-                    transition: box-shadow .1s linear
+                    transition: box-shadow 0.1s linear
 
     .botao.off
         box-shadow: -7px 7px 10px -5px #474944ce, 0px 0px 20px 0px #f1f1f183
 
         .letter-braille
             box-shadow: inset .05px -0.05px 2px -1px #4749448e, inset -0.05px .05px 3px -1px #f1f1f1a1
+
+    .light
+        position: fixed
+        top: 0
+        left: 0
+        height: 100vh
+        width: 100vw
+        background-color: black
+        animation: apaga .7s linear
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .hello
+            color: #ffffffbd
+            font-size: 2em
+            margin: 0 auto
+            border-right: solid 2px #ffffffbd
+            padding-right: 2px
+            white-space: nowrap
+            overflow: hidden
+
+            &.cursor
+                animation: cursor .8s linear infinite , typing 1.5s ease
+                animation-timing-function: steps(12, end)
+
+@keyframes apaga
+    0%
+        opacity: 0
+        box-shadow: inset 0px 0px 0px 0px black
+
+    100%
+        opacity: 1
+        box-shadow: inset 0px 0px 100vh 0px black
+
+@keyframes cursor
+    0%
+        border-right: solid 2px #ffffffbd
+
+    50%
+        border-right: solid 2px #ffffffbd
+
+    50.5%
+        border-right: solid 2px #ffffff00
+
+    100%
+        border-right: solid 2px #ffffff00
+
+@keyframes typing
+    0%
+        width: 0px
+
+    100%
+        width: 7em
