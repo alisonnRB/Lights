@@ -1,8 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Light_and_code() {
     const [escreve, setEscreve] = useState(false);
+    const [move, setMove] = useState(false);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -18,10 +22,19 @@ export default function Light_and_code() {
                 setEscreve(false);
             }, 6800);
 
-            return () => clearTimeout(timeoutId);   
+            const Timer = setTimeout(() => {
+                setMove(true);
+            }, 7000);
+   
+            return () => clearTimeout(timeoutId); 
         }
-
     }, [escreve]);
+
+    useEffect(()=>{
+        if(move){
+            navigate('/Menu');
+        }
+    },[move])
 
     return (
         <div className="light">
