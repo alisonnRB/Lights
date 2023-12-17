@@ -31,7 +31,7 @@
   display: block;
   box-shadow: -15px 15px 20px 0px rgba(71, 73, 68, 0.8078431373), 5px -5px 20px 0px rgba(241, 241, 241, 0.4588235294);
   cursor: pointer;
-  transition: box-shadow 0.1s linear;
+  transition: box-shadow 0.05s linear;
 }
 .home .botao .braille, .home .botao .hello, .home .botao .message {
   display: flex;
@@ -71,7 +71,7 @@
   width: 5px;
   border-radius: 50%;
   box-shadow: inset 0.2px -0.2px 2px -1px rgba(71, 73, 68, 0.9176470588), inset -0.2px 0.2px 2px -1px rgba(241, 241, 241, 0.631372549);
-  transition: box-shadow 0.1s linear;
+  transition: box-shadow 0.05s linear;
 }
 .home .botao.off {
   box-shadow: -7px 7px 10px -5px rgba(71, 73, 68, 0.8078431373), 0px 0px 20px 0px rgba(241, 241, 241, 0.5137254902);
@@ -92,17 +92,18 @@
   justify-content: center;
 }
 .home .light .hello {
-  color: rgba(255, 255, 255, 0.7411764706);
+  color: black;
   font-size: 2em;
   margin: 0 auto;
+  color: rgba(255, 255, 255, 0.7411764706);
   border-right: solid 2px rgba(255, 255, 255, 0.7411764706);
   padding-right: 2px;
   white-space: nowrap;
   overflow: hidden;
 }
 .home .light .hello.cursor {
-  animation: cursor 0.8s linear infinite, typing 1.5s ease;
-  animation-timing-function: steps(12, end);
+  animation: cursor 0.8s linear infinite, typing 2s ease, pisca 0.1s 4s ease, pisca 0.1s 4.1s ease, pisca 0.1s 5.5s ease, pisca 0.1s 5.6s ease, pisca 1.6s 6.2s linear;
+  animation-timing-function: steps(11, end);
 }
 
 @keyframes apaga {
@@ -135,6 +136,22 @@
   }
   100% {
     width: 7em;
+  }
+}
+@keyframes pisca {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pisca {
+  0% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
   }
 }
 

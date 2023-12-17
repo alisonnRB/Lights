@@ -12,6 +12,17 @@ export default function Light_and_code() {
         return () => clearTimeout(timeoutId);
     }, []);
 
+    useEffect(() => {
+        if(escreve){
+            const timeoutId = setTimeout(() => {
+                setEscreve(false);
+            }, 6800);
+
+            return () => clearTimeout(timeoutId);   
+        }
+
+    }, [escreve]);
+
     return (
         <div className="light">
             {escreve ? <p className="hello cursor">HELLO WORLD!</p> : null}
