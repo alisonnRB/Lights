@@ -1,4 +1,4 @@
-import './output/styles.css';
+import './output/style.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './paginas/helloWord/index';

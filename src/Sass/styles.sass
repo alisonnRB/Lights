@@ -3,17 +3,76 @@
     margin: 0
     font-family: 'forum'
     font-size: 1.1em
+    color: #474944
 
 .home
     height: 100vh
     width: 100vw
-    background-color: #C0BDB9
+    background: rgb(192,189,185)
+    background: linear-gradient(45deg, rgba(192,189,185,1) 73%, rgba(221,217,213,1) 96%)
     display: flex
     flex-direction: column
     justify-content: space-between
     align-items: center
 
+    .lets
+        margin-top: 20px
+
+    .apresentation
+        margin-bottom: 20px
+
     .botao
         height: 180px
         width: 330px
+        border-radius: 2px
         background-color: #E4E0DD
+        display: block
+        box-shadow: -15px 15px 20px 0px #474944ce, 5px -5px 20px 0px #f1f1f175
+        cursor: pointer
+        transition: box-shadow .1s linear
+
+        .braille, .hello, .message
+            display: flex
+            align-items: center
+            justify-content: center
+
+        .braille
+            height: 20%
+
+        .hello
+            height: 60%
+            font-size: 1.5em
+            font-weight: 300
+
+        .message
+            height: 30%
+            font-size: .7em
+            align-items: start
+
+        .letters-camp
+            display: flex
+            flex-direction: row
+            align-items: center
+            position: relative
+            top: 15px
+            gap: 2px
+
+            .one-letter-camp
+                height: 20px
+                width: 15px
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-template-rows: repeat(3, calc( 20px / 3))
+
+                .letter-braille
+                    height: 5px
+                    width: 5px
+                    border-radius: 50%
+                    box-shadow: inset .2px -0.2px 2px -1px #474944ea, inset -0.2px .2px 2px -1px #f1f1f1a1
+                    transition: box-shadow .1s linear
+
+    .botao.off
+        box-shadow: -7px 7px 10px -5px #474944ce, 0px 0px 20px 0px #f1f1f183
+
+        .letter-braille
+            box-shadow: inset .05px -0.05px 2px -1px #4749448e, inset -0.05px .05px 3px -1px #f1f1f1a1
