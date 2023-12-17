@@ -3,7 +3,6 @@
   width: 100vw;
   background-image: url("../drawble/texture_menu.png");
   background-size: 1366px 768px;
-  overflow: hidden;
 }
 .menu .light {
   position: fixed;
@@ -55,6 +54,7 @@
   height: 70%;
   width: 60%;
   font-size: 0.7em;
+  overflow: visible;
 }
 .menu .card-menu-about .bottom {
   height: 25%;
@@ -107,6 +107,35 @@
 .menu .card-menu-projects .content-see p {
   cursor: pointer;
 }
+.menu .paw {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  opacity: 0;
+}
+.menu .paw.zero {
+  bottom: 20px;
+  left: 300px;
+  rotate: -35deg;
+  animation: paws 5s 2s linear infinite;
+}
+.menu .paw.one {
+  top: 100px;
+  right: 100px;
+  rotate: 35deg;
+  animation: paws 5s linear infinite;
+}
+.menu .paw.two {
+  top: 100px;
+  left: 100px;
+  rotate: -20deg;
+  animation: paws 5s 4s linear infinite;
+}
+.menu .paw img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 @keyframes acende {
   0% {
@@ -134,6 +163,14 @@
   100% {
     transform: translateY(0) translateX(0) rotate(0);
     box-shadow: -5px 5px 8px 0px rgba(0, 0, 0, 0.4039215686), inset -5px 5px 20px 0px rgba(255, 255, 255, 0.2941176471);
+  }
+}
+@keyframes paws {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 

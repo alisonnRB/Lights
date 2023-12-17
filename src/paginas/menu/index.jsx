@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import '../../output/style_menu.css';
 
+import Paw from "./paw";
+
 export default function Menu() {
     const [open, setOpen] = useState(false);
 
@@ -36,6 +38,9 @@ export default function Menu() {
 
     return (
         <div className="menu">
+
+            <Paw />
+            
             {!open ? <div className='light'></div> : null}
 
             {card1 ? <div className="card-menu-about">

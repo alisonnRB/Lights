@@ -3,7 +3,6 @@
     width: 100vw
     background-image: url('../drawble/texture_menu.png')
     background-size: 1366px 768px
-    overflow: hidden
 
     .light
         position: fixed
@@ -55,6 +54,7 @@
                 height: 70%
                 width: 60%
                 font-size: .7em
+                overflow: visible
 
         .bottom
             height: 25%
@@ -107,6 +107,35 @@
             p
                 cursor: pointer
 
+    .paw
+        height: 100px
+        width: 100px
+        position: absolute
+        opacity: 0
+
+        &.zero
+            bottom: 20px
+            left: 300px
+            rotate: -35deg
+            animation: paws 5s 2s linear infinite
+
+        &.one
+            top: 100px
+            right: 100px
+            rotate: 35deg
+            animation: paws 5s linear infinite
+
+        &.two
+            top: 100px
+            left: 100px
+            rotate: -20deg
+            animation: paws 5s 4s linear infinite
+
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+
 @keyframes acende
     0%
         box-shadow: inset 0px 0px 100vw 50vw black
@@ -131,3 +160,10 @@
     100%
         transform: translateY(0) translateX(0) rotate(0)
         box-shadow: -5px 5px 8px 0px #00000067, inset -5px 5px 20px 0px #ffffff4b
+
+@keyframes paws
+    0%, 100%
+        opacity: 0
+
+    50%
+        opacity: 1
