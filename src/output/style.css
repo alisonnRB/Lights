@@ -8,6 +8,15 @@
   overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  background-color: #E4E0DD;
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(71, 73, 68, 0.7803921569);
+}
+
 .home {
   height: 100vh;
   width: 100vw;
