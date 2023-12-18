@@ -87,7 +87,7 @@
   padding-top: 3%;
   animation: content 1s ease;
 }
-.projects .content-cards .content-project .card .title {
+.projects .content-cards .content-project .card .content-infos .title {
   width: 100%;
   height: 20%;
   display: flex;
@@ -95,15 +95,24 @@
   color: #E4E0DD;
   font-size: 1.5em;
 }
-.projects .content-cards .content-project .card .desc {
+.projects .content-cards .content-project .card .content-infos .desc {
   width: 100%;
   height: 70%;
   display: flex;
   padding-top: 20px;
 }
-.projects .content-cards .content-project .card .desc p {
+.projects .content-cards .content-project .card .content-infos .desc p {
   color: #E4E0DD;
   font-size: 0.8em;
+}
+.projects .content-cards .content-project .card .content-infos .coming-soon {
+  display: flex;
+  align-items: end;
+  margin-top: -20px;
+  height: calc(10% + 10px);
+  width: 100%;
+  font-size: 0.5em;
+  color: rgba(228, 224, 221, 0.5333333333);
 }
 .projects .coming {
   width: 100%;

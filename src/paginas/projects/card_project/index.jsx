@@ -22,6 +22,8 @@ export default function Card_project(props) {
                     <div className="desc" style={props.index % 2 == 0 ? { textAlign: "left" } : { textAlign: "right" }}>
                         <p>{props.infos.text}</p>
                     </div>
+
+                    {!props.infos.ready ? <div className="coming-soon"  style={props.index % 2 == 0 ? { justifyContent: 'end' } : { justifyContent: 'start' }}>coming soon . . .</div> : null}
                 </div>
             </a> : null}
         </div>
