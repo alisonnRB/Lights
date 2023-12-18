@@ -1,6 +1,10 @@
 .projects
     height: 100vh
     width: 100vw
+    background-color: #E4E0DD
+    display: block
+    overflow-y: auto
+    padding-bottom: 100px
 
     .light
         position: fixed
@@ -14,3 +18,144 @@
 
         &.turn
             animation: acende 1s linear reverse
+
+    .title
+        position: relative
+        display: flex
+        justify-content: end
+        align-items: end
+        overflow: visible
+
+        &.turn
+            animation: title-surge 1s linear
+            height: 8%
+            width: 50%
+            left: 10%
+            border-bottom: solid 1.5px #474944c7
+            border-left: solid 1.5px #474944c7
+
+            p
+                position: relative
+                top: 10px
+                left: 30px
+                padding-bottom: 10px
+                padding-right: 30px
+                border-bottom: solid 1.5px #474944c7
+                animation: letter-surge 2s ease
+                width: 6em
+                white-space: nowrap
+                overflow: hidden
+
+    .content-cards
+        margin-top: 70px
+        min-height: 100%
+        width: 100vw
+        overflow: visible
+
+        .content-project
+            height: 300px
+            width: 100%
+            display: flex
+            margin-top: 100px
+            overflow: visible
+
+            .card
+                height: 100%
+                width: 65%
+                background-color: #423932
+                display: flex
+                box-shadow: -10px 15px 20px 0px #000000e3
+                text-decoration: none
+                cursor: pointer
+                animation: card-open .5s ease
+
+                img
+                    width: 30%
+                    object-fit: contain
+                    height: 100%
+                    animation: content 1s ease
+
+                .content-infos
+                    width: 70%
+                    height: 100%
+                    padding-left: 3%
+                    padding-right: 3%
+                    padding-top: 3%
+                    animation: content 1s ease
+
+                .title
+                    width: 100%
+                    height: 20%
+                    display: flex
+                    align-items: center
+                    color: #E4E0DD
+                    font-size: 1.5em
+
+                .desc
+                    width: 100%
+                    height: 70%
+                    display: flex
+                    padding-top: 20px
+
+                    p
+                        color: #E4E0DD
+                        font-size: .8em
+    
+    .coming
+        width: 100%
+        height: 100px
+        margin-top: 40px
+        display: flex
+        align-items: end
+        justify-content: center
+        color: white
+        font-size: 2em
+        font-weight: bold
+
+@keyframes title-surge
+    0%
+        height: 0
+        width: 0
+
+    10%
+        height: 8%
+        width: 0
+
+    100%
+        height: 8%
+        width: 50%
+
+@keyframes letter-surge
+    0%
+        color: #47494400
+        width: 0
+        padding-right: 0
+
+    50%
+        color: #47494400
+        width: 0
+        padding-right: 0
+
+    100%
+        color: #474944c7
+        padding-right: 30px
+        width: 6em
+
+@keyframes card-open
+    0%
+        height: 80%
+        width: 0%
+
+    100%
+        height: 100%
+        width: 65%
+
+@keyframes content
+    0%
+        opacity: 0
+
+    40%
+        opacity: 0
+    
+    100%
+        opacity: 1
