@@ -16,7 +16,7 @@
   box-shadow: inset 0px 0px 100vw 50vw black;
   animation: acende 1s linear;
 }
-.projects .light.turn {
+.projects .light.off {
   animation: acende 1s linear reverse;
 }
 .projects .title {
@@ -124,6 +124,27 @@
   color: white;
   font-size: 2em;
   font-weight: bold;
+}
+.projects .back-card {
+  background-image: url("../drawble/texture_card_projects.png");
+  height: 100px;
+  width: 200px;
+  display: flex;
+  align-items: end;
+  box-shadow: -5px 5px 8px 0px rgba(0, 0, 0, 0.4039215686), inset -5px 5px 20px 0px rgba(255, 255, 255, 0.2941176471);
+  transform: rotate(-25deg);
+  position: absolute;
+  top: -60px;
+  right: -70px;
+}
+.projects .back-card p {
+  border-top: solid 1.5px #5F534E;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+  cursor: pointer;
 }
 
 @keyframes title-surge {
