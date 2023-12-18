@@ -1,7 +1,7 @@
 .mySkills
     height: 100vh
     width: 100vw
-    background-image: url('../drawble/texture_card_projects.png')
+    background-color: #241f1f
     background-size: 700px 350px
 
     .light
@@ -18,7 +18,131 @@
         position: fixed
         top: 0
         left: 0
-        z-index: 10
+        z-index: 0
         height: 100vh
         width: 100vw
-        background-color: #000000e3
+        background-color: #0000008f
+
+    .content-rope
+        position: absolute
+        left: 150px
+        height: 300px
+        width: 100px
+        display: flex
+        justify-content: center
+        z-index: 10
+
+    .operations
+        position: absolute
+        z-index: 10
+        top: -55px
+        right: 0
+        display: flex
+        flex-direction: column
+
+        .engrenagem
+            position: relative
+
+            &.zero
+                height: 110px
+                width: 110px
+                top: 45px
+                left: 15px
+
+            &.one
+                width: 120px
+                height: 120px
+                left: 30px
+                top: 35px
+
+            &.two
+                height: 140px
+                width: 140px
+                left: 90px
+
+            &.turn
+                &.zero
+                    animation: girar 4s linear infinite
+
+                &.one
+                    animation: girar 4s linear infinite reverse
+
+                &.two
+                    animation: girar 4s linear infinite
+
+    .lamps
+        position: absolute
+        top: 35%
+        left: 28%
+        overflow: visible
+
+        .lamp
+            height: 90px
+            width: 90px
+            border: solid 1px #ffffff86
+            border-radius: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: .7em
+            color: #ffffff86
+            z-index: 20
+            position: relative
+
+        .row
+            display: flex
+            flex-direction: row
+            gap: 50px
+            margin-bottom: 20px
+            overflow: visible
+            
+            .turn
+                background-color: #ffffff63
+                border: solid 1px #ffffff00
+
+                &.zero
+                    box-shadow: 0px 0px 150px 40px #909edd, inset 0px 0px 100px 10px #909edd, inset -10px -10px 25px 10px #ffffff
+                    transition: all 1s 1s ease
+
+                &.one
+                    box-shadow: 0px 0px 150px 40px #677ad1be, inset 0px 0px 100px 10px #677ad1be, inset 0px -10px 25px 10px #ffffff
+                    transition: all 1s 3.8s ease
+
+                &.two
+                    box-shadow: 0px 0px 150px 40px #e731cfbe, inset 0px 0px 100px 10px #e731cfbe, inset 0px -10px 25px 10px #ffffff
+                    transition: all 1s 4s ease
+
+                &.three
+                    box-shadow: 0px 0px 150px 40px #2cd435be, inset 0px 0px 100px 10px #2cd435be, inset 10px -10px 25px 10px #ffffff
+                    transition: all 1s 3.5s ease
+
+                &.four
+                    box-shadow: 0px 0px 150px 40px #f59313be, inset 0px 0px 100px 10px #f59313be, inset -10px 10px 25px 10px #ffffff
+                    transition: all 1s 4s ease
+
+                &.five
+                    box-shadow: 0px 0px 150px 40px #1431b1be, inset 0px 0px 100px 10px #1431b1be, inset 0px 10px 25px 10px #ffffff
+                    transition: all 1s 4.2s ease
+
+                &.six
+                    box-shadow: 0px 0px 150px 40px #bb8d0fbe, inset 0px 0px 100px 10px #bb8d0fbe, inset 0px 10px 25px 10px #ffffff
+                    transition: all 1s 2s ease
+
+                &.seven
+                    box-shadow: 0px 0px 150px 40px #273a8fbe, inset 0px 0px 100px 10px #273a8fbe, inset 0px 10px 25px 10px #ffffff
+                    transition: all 1s 4.2s ease
+
+                &.eight
+                    box-shadow: 0px 0px 150px 40px #def50fbe, inset 0px 0px 100px 10px #def50fbe, inset 10px 10px 25px 10px #ffffff
+                    transition: all 1s 3s ease
+
+        .row:first-child
+            padding-left: 60px
+            padding-right: 60px
+
+@keyframes girar
+    0%
+        transform: rotate(0)
+
+    100%
+        transform: rotate(360deg)
