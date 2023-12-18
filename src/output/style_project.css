@@ -28,13 +28,14 @@
 }
 .projects .title.turn {
   animation: title-surge 1s linear;
-  height: 8%;
+  height: 13%;
   width: 50%;
   left: 10%;
   border-bottom: solid 1.5px rgba(71, 73, 68, 0.7803921569);
   border-left: solid 1.5px rgba(71, 73, 68, 0.7803921569);
 }
 .projects .title.turn p {
+  font-size: 2em;
   position: relative;
   top: 10px;
   left: 30px;
@@ -58,6 +59,8 @@
   display: flex;
   margin-top: 100px;
   overflow: visible;
+  align-items: center;
+  justify-content: center;
 }
 .projects .content-cards .content-project .card {
   height: 100%;
@@ -67,6 +70,7 @@
   box-shadow: -10px 15px 20px 0px rgba(0, 0, 0, 0.8901960784);
   text-decoration: none;
   cursor: pointer;
+  border-radius: 10px;
   animation: card-open 0.5s ease;
 }
 .projects .content-cards .content-project .card img {
@@ -119,11 +123,11 @@
     width: 0;
   }
   10% {
-    height: 8%;
+    height: 13%;
     width: 0;
   }
   100% {
-    height: 8%;
+    height: 13%;
     width: 50%;
   }
 }

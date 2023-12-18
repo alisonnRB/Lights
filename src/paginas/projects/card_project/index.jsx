@@ -13,7 +13,7 @@ export default function Card_project(props) {
 
 
     return (
-        <div ref={ref} className="content-project" style={props.index % 2 == 0 ? { justifyContent: 'start' } : { justifyContent: 'end' }}>
+        <div ref={ref} className="content-project">
             {open ? <a href={props.infos.ready ? props.infos.ref : null} className="card" style={props.index % 2 == 0 ? {} : { flexDirection: 'row-reverse' }}>
                 <img src={props.infos.img} alt="" style={{ backgroundColor: props.infos.bg }} />
 
