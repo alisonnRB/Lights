@@ -13,13 +13,6 @@ export default function Projects() {
     const list = {
         0: { 'img': ihm, 'bg': 'white', 'name': 'IHM', 'ref': 'https:\\www.literary-ihm.com', 'ready': true, 'text': 'IHM é uma rede social literateraria, que permite escevrever e ler livros assim como permite a interação entre os usuarios.' },
         1: { 'img': palabraria, 'bg': 'black', 'name': 'Palabraria', 'ref' : '', 'ready': false, 'text': 'Um dicionário ilustrado e livre de lingua espanhola com onjetivo de ampliar o repertório da lingua de uma maneira cooperativa com as instituições educacionais' },
-
-        2: { 'img': ihm, 'bg': 'white', 'name': 'IHM', 'ref': 'https:\\www.literary-ihm.com', 'ready': true, 'text': 'IHM é uma rede social literateraria, que permite escevrever e ler livros assim como permite a interação entre os usuarios.' },
-        3: { 'img': palabraria, 'bg': 'black', 'name': 'Palabraria', 'ref' : '', 'ready': false, 'text': 'Um dicionário ilustrado e livre de lingua espanhola com onjetivo de ampliar o repertório da lingua de uma maneira cooperativa com as instituições educacionais' },
-        4: { 'img': ihm, 'bg': 'white', 'name': 'IHM', 'ref': 'https:\\www.literary-ihm.com', 'ready': true, 'text': 'IHM é uma rede social literateraria, que permite escevrever e ler livros assim como permite a interação entre os usuarios.' },
-        5: { 'img': palabraria, 'bg': 'black', 'name': 'Palabraria', 'ref' : '', 'ready': false, 'text': 'Um dicionário ilustrado e livre de lingua espanhola com onjetivo de ampliar o repertório da lingua de uma maneira cooperativa com as instituições educacionais' },
-        6: { 'img': ihm, 'bg': 'white', 'name': 'IHM', 'ref': 'https:\\www.literary-ihm.com', 'ready': true, 'text': 'IHM é uma rede social literateraria, que permite escevrever e ler livros assim como permite a interação entre os usuarios.' },
-        7: { 'img': palabraria, 'bg': 'black', 'name': 'Palabraria', 'ref' : '', 'ready': false, 'text': 'Um dicionário ilustrado e livre de lingua espanhola com onjetivo de ampliar o repertório da lingua de uma maneira cooperativa com as instituições educacionais' }
     }
 
     useEffect(() => {
