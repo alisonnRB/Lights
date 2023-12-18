@@ -3,6 +3,7 @@
   width: 100vw;
   background-color: #241f1f;
   background-size: 700px 350px;
+  box-shadow: inset 0px 0px 100px 50px black;
 }
 .mySkills .light {
   position: fixed;
@@ -13,6 +14,9 @@
   width: 100vw;
   box-shadow: inset 0px 0px 100vw 50vw black;
   animation: acende 1s linear;
+}
+.mySkills .light.turn {
+  animation: acende 1s linear reverse;
 }
 .mySkills .filtro {
   position: fixed;
@@ -32,6 +36,21 @@
   justify-content: center;
   z-index: 10;
 }
+.mySkills .instruction {
+  position: relative;
+  z-index: 20;
+  color: rgba(255, 255, 255, 0.5254901961);
+  left: 230px;
+  top: 10px;
+  width: 80px;
+  font-size: 0.9em;
+}
+.mySkills .instruction.on.turn {
+  animation: hint-hiden 1s ease reverse;
+}
+.mySkills .instruction.turn {
+  animation: hint-hiden 1s ease;
+}
 .mySkills .operations {
   position: absolute;
   z-index: 10;
@@ -42,6 +61,8 @@
 }
 .mySkills .operations .engrenagem {
   position: relative;
+  -webkit-filter: drop-shadow(-10px 5px 5px #000);
+  filter: drop-shadow(-10px 5px 5px #000);
 }
 .mySkills .operations .engrenagem.zero {
   height: 110px;
@@ -96,44 +117,87 @@
   overflow: visible;
 }
 .mySkills .lamps .row .turn {
-  background-color: rgba(255, 255, 255, 0.3882352941);
   border: solid 1px rgba(255, 255, 255, 0);
+  color: white;
 }
 .mySkills .lamps .row .turn.zero {
-  box-shadow: 0px 0px 150px 40px #909edd, inset 0px 0px 100px 10px #909edd, inset -10px -10px 25px 10px #ffffff;
+  box-shadow: 0px 0px 200px 50px rgba(97, 218, 251, 0.7450980392), inset 0px 0px 100px 10px rgba(97, 218, 251, 0.7450980392), inset -10px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 1s ease;
+  background-color: #61DAFB;
+}
+.mySkills .lamps .row .turn.zero.fail {
+  transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.one {
-  box-shadow: 0px 0px 150px 40px rgba(103, 122, 209, 0.7450980392), inset 0px 0px 100px 10px rgba(103, 122, 209, 0.7450980392), inset 0px -10px 25px 10px #ffffff;
+  box-shadow: 0px 0px 200px 50px rgba(105, 122, 177, 0.7450980392), inset 0px 0px 100px 10px rgba(105, 122, 177, 0.7450980392), inset 0px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 3.8s ease;
+  background-color: #697AB1;
+}
+.mySkills .lamps .row .turn.one.fail {
+  transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.two {
-  box-shadow: 0px 0px 150px 40px rgba(231, 49, 207, 0.7450980392), inset 0px 0px 100px 10px rgba(231, 49, 207, 0.7450980392), inset 0px -10px 25px 10px #ffffff;
+  box-shadow: 0px 0px 200px 50px rgba(198, 99, 148, 0.7450980392), inset 0px 0px 100px 10px rgba(198, 99, 148, 0.7450980392), inset 0px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 4s ease;
+  background-color: #C66394;
+}
+.mySkills .lamps .row .turn.two.fail {
+  transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.three {
-  box-shadow: 0px 0px 150px 40px rgba(44, 212, 53, 0.7450980392), inset 0px 0px 100px 10px rgba(44, 212, 53, 0.7450980392), inset 10px -10px 25px 10px #ffffff;
+  box-shadow: 0px 0px 200px 50px rgba(139, 191, 61, 0.7450980392), inset 0px 0px 100px 10px rgba(139, 191, 61, 0.7450980392), inset 10px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 3.5s ease;
+  background-color: #8BBF3D;
+}
+.mySkills .lamps .row .turn.three.fail {
+  transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.four {
-  box-shadow: 0px 0px 150px 40px rgba(245, 147, 19, 0.7450980392), inset 0px 0px 100px 10px rgba(245, 147, 19, 0.7450980392), inset -10px 10px 25px 10px #ffffff;
+  box-shadow: 0px 0px 200px 50px rgba(232, 77, 49, 0.7450980392), inset 0px 0px 100px 10px rgba(232, 77, 49, 0.7450980392), inset -10px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 4s ease;
+  background-color: #E84D31;
+}
+.mySkills .lamps .row .turn.four.fail {
+  transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.five {
-  box-shadow: 0px 0px 150px 40px rgba(20, 49, 177, 0.7450980392), inset 0px 0px 100px 10px rgba(20, 49, 177, 0.7450980392), inset 0px 10px 25px 10px #ffffff;
+  box-shadow: 0px 0px 200px 50px rgba(18, 151, 209, 0.7450980392), inset 0px 0px 100px 10px rgba(18, 151, 209, 0.7450980392), inset 0px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 4.2s ease;
+  background-color: #1297D1;
+}
+.mySkills .lamps .row .turn.five.fail {
+  transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.six {
-  box-shadow: 0px 0px 150px 40px rgba(187, 141, 15, 0.7450980392), inset 0px 0px 100px 10px rgba(187, 141, 15, 0.7450980392), inset 0px 10px 25px 10px #ffffff;
+  box-shadow: 0px 0px 200px 50px rgba(233, 98, 40, 0.7450980392), inset 0px 0px 100px 10px rgba(233, 98, 40, 0.7450980392), inset 0px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 2s ease;
+  background-color: #E96228;
+}
+.mySkills .lamps .row .turn.six.fail {
+  transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.seven {
-  box-shadow: 0px 0px 150px 40px rgba(39, 58, 143, 0.7450980392), inset 0px 0px 100px 10px rgba(39, 58, 143, 0.7450980392), inset 0px 10px 25px 10px #ffffff;
+  box-shadow: 0px 0px 200px 50px rgba(0, 116, 208, 0.7450980392), inset 0px 0px 100px 10px rgba(0, 116, 208, 0.7450980392), inset 0px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 4.2s ease;
+  background-color: #0074D0;
+}
+.mySkills .lamps .row .turn.seven.fail {
+  transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.eight {
-  box-shadow: 0px 0px 150px 40px rgba(222, 245, 15, 0.7450980392), inset 0px 0px 100px 10px rgba(222, 245, 15, 0.7450980392), inset 10px 10px 25px 10px #ffffff;
+  box-shadow: 0px 0px 200px 50px rgba(239, 216, 29, 0.7450980392), inset 0px 0px 100px 10px rgba(239, 216, 29, 0.7450980392), inset 10px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 3s ease;
+  background-color: #EFD81D;
+}
+.mySkills .lamps .row .turn.eight.fail {
+  transition: all 0.3s 0s ease;
+}
+.mySkills .lamps .row .turn.off {
+  box-shadow: 0px 0px 0px 0px #fff;
+  background-color: transparent;
+  border: solid 1px rgba(255, 255, 255, 0.5254901961);
+  transition: all 2s 0s ease;
+  color: #f5f5f5;
 }
 .mySkills .lamps .row:first-child {
   padding-left: 60px;
@@ -146,6 +210,14 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes hint-hiden {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

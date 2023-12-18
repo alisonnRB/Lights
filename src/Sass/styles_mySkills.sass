@@ -3,6 +3,7 @@
     width: 100vw
     background-color: #241f1f
     background-size: 700px 350px
+    box-shadow: inset 0px 0px 100px 50px black
 
     .light
         position: fixed
@@ -13,6 +14,9 @@
         width: 100vw
         box-shadow: inset 0px 0px 100vw 50vw black
         animation: acende 1s linear
+
+        &.turn
+            animation: acende 1s linear reverse
 
     .filtro
         position: fixed
@@ -32,6 +36,21 @@
         justify-content: center
         z-index: 10
 
+    .instruction
+        position: relative
+        z-index: 20
+        color: #ffffff86
+        left: 230px
+        top: 10px
+        width: 80px
+        font-size: .9em
+
+        &.on.turn
+            animation: hint-hiden 1s ease reverse
+
+        &.turn
+            animation: hint-hiden 1s ease
+
     .operations
         position: absolute
         z-index: 10
@@ -42,6 +61,8 @@
 
         .engrenagem
             position: relative
+            -webkit-filter: drop-shadow( -10px 5px 5px #000)
+            filter: drop-shadow( -10px 5px 5px #000)
 
             &.zero
                 height: 110px
@@ -95,46 +116,89 @@
             gap: 50px
             margin-bottom: 20px
             overflow: visible
-            
+
             .turn
-                background-color: #ffffff63
                 border: solid 1px #ffffff00
+                color: white
 
                 &.zero
-                    box-shadow: 0px 0px 150px 40px #909edd, inset 0px 0px 100px 10px #909edd, inset -10px -10px 25px 10px #ffffff
+                    box-shadow: 0px 0px 200px 50px #61DAFBbe, inset 0px 0px 100px 10px #61DAFBbe, inset -10px -10px 25px 10px #ffffffbe
                     transition: all 1s 1s ease
+                    background-color: #61DAFB
+
+                    &.fail
+                        transition: all .3s 0s ease
 
                 &.one
-                    box-shadow: 0px 0px 150px 40px #677ad1be, inset 0px 0px 100px 10px #677ad1be, inset 0px -10px 25px 10px #ffffff
+                    box-shadow: 0px 0px 200px 50px #697AB1be, inset 0px 0px 100px 10px #697AB1be, inset 0px -10px 25px 10px #ffffffbe
                     transition: all 1s 3.8s ease
+                    background-color: #697AB1
+
+                    &.fail
+                        transition: all .3s 0s ease
 
                 &.two
-                    box-shadow: 0px 0px 150px 40px #e731cfbe, inset 0px 0px 100px 10px #e731cfbe, inset 0px -10px 25px 10px #ffffff
+                    box-shadow: 0px 0px 200px 50px #C66394be, inset 0px 0px 100px 10px #C66394be, inset 0px -10px 25px 10px #ffffffbe
                     transition: all 1s 4s ease
+                    background-color: #C66394
+
+                    &.fail
+                        transition: all .3s 0s ease
 
                 &.three
-                    box-shadow: 0px 0px 150px 40px #2cd435be, inset 0px 0px 100px 10px #2cd435be, inset 10px -10px 25px 10px #ffffff
+                    box-shadow: 0px 0px 200px 50px #8BBF3Dbe, inset 0px 0px 100px 10px #8BBF3Dbe, inset 10px -10px 25px 10px #ffffffbe
                     transition: all 1s 3.5s ease
+                    background-color:#8BBF3D
+
+                    &.fail
+                        transition: all .3s 0s ease
 
                 &.four
-                    box-shadow: 0px 0px 150px 40px #f59313be, inset 0px 0px 100px 10px #f59313be, inset -10px 10px 25px 10px #ffffff
+                    box-shadow: 0px 0px 200px 50px #E84D31be, inset 0px 0px 100px 10px #E84D31be, inset -10px 10px 25px 10px #ffffffbe
                     transition: all 1s 4s ease
+                    background-color: #E84D31
+
+                    &.fail
+                        transition: all .3s 0s ease
 
                 &.five
-                    box-shadow: 0px 0px 150px 40px #1431b1be, inset 0px 0px 100px 10px #1431b1be, inset 0px 10px 25px 10px #ffffff
+                    box-shadow: 0px 0px 200px 50px #1297D1be, inset 0px 0px 100px 10px #1297D1be, inset 0px 10px 25px 10px #ffffffbe
                     transition: all 1s 4.2s ease
+                    background-color: #1297D1
+
+                    &.fail
+                        transition: all .3s 0s ease
 
                 &.six
-                    box-shadow: 0px 0px 150px 40px #bb8d0fbe, inset 0px 0px 100px 10px #bb8d0fbe, inset 0px 10px 25px 10px #ffffff
+                    box-shadow: 0px 0px 200px 50px #E96228be, inset 0px 0px 100px 10px #E96228be, inset 0px 10px 25px 10px #ffffffbe
                     transition: all 1s 2s ease
+                    background-color: #E96228
+
+                    &.fail
+                        transition: all .3s 0s ease
 
                 &.seven
-                    box-shadow: 0px 0px 150px 40px #273a8fbe, inset 0px 0px 100px 10px #273a8fbe, inset 0px 10px 25px 10px #ffffff
+                    box-shadow: 0px 0px 200px 50px #0074D0be, inset 0px 0px 100px 10px #0074D0be, inset 0px 10px 25px 10px #ffffffbe
                     transition: all 1s 4.2s ease
+                    background-color: #0074D0
+
+                    &.fail
+                        transition: all .3s 0s ease
 
                 &.eight
-                    box-shadow: 0px 0px 150px 40px #def50fbe, inset 0px 0px 100px 10px #def50fbe, inset 10px 10px 25px 10px #ffffff
+                    box-shadow: 0px 0px 200px 50px #EFD81Dbe, inset 0px 0px 100px 10px #EFD81Dbe, inset 10px 10px 25px 10px #ffffffbe
                     transition: all 1s 3s ease
+                    background-color: #EFD81D
+
+                    &.fail
+                        transition: all .3s 0s ease
+
+                &.off
+                    box-shadow: 0px 0px 0px 0px #fff
+                    background-color: transparent
+                    border: solid 1px #ffffff86
+                    transition: all 2s 0s ease
+                    color: #f5f5f5
 
         .row:first-child
             padding-left: 60px
@@ -146,3 +210,10 @@
 
     100%
         transform: rotate(360deg)
+
+@keyframes hint-hiden
+    0%
+        opacity: 1
+
+    100%
+        opacity: 0
