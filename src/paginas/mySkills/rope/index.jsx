@@ -51,7 +51,8 @@ export default function Rope(props) {
           cursor: grabbing ? 'grabbing' : 'grab',
           borderBottomLeftRadius: '10px',
           borderBottomRightRadius: '10px',
-          boxShadow: 'inset 6px 0px 6px -4px #000000be'
+          boxShadow: 'inset 6px 0px 6px -4px #000000be',
+          touchAction: 'none'
         }}
       />
     </div>

@@ -54,7 +54,14 @@ export default function Menu() {
     }
 
     const Navigate_myProjects = () => {
+        setTurn(true);
+        setOpen(false);
 
+        const timeoutId = setTimeout(() => {
+            navigate('/menu/projects');
+        }, 500);
+
+        return () => clearTimeout(timeoutId);
     }
 
     return (
