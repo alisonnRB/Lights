@@ -36,6 +36,12 @@
   justify-content: center;
   z-index: 10;
 }
+.mySkills .ropes {
+  background-image: url("../drawble/corda.png");
+  background-size: 500% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .mySkills .instruction {
   position: relative;
   z-index: 20;

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useGesture } from 'react-use-gesture';
 
+import Ropes from '../../../drawble/corda.png';
+
 export default function Rope(props) {
   const [grabbing, setGrabbing] = useState(false)
   const [action, setAction] = useState(false);
@@ -22,7 +24,7 @@ export default function Rope(props) {
     onDrag: ({ down, movement: [_, my] }) => {
       if (down) {
       
-        if (100 + my >= 200) {
+        if (100 + my >= 300) {
           setAction(true);
           return;
         }
@@ -43,16 +45,14 @@ export default function Rope(props) {
     <div className="content-rope">
       <animated.div
         {...bind()}
+        className='ropes'
         style={{
-          width: '10px',
+          width: '30px',
           height,
-          maxHeight: '200px',
-          backgroundColor: '#B4B0AD',
+          maxHeight: '300px',
           cursor: grabbing ? 'grabbing' : 'grab',
-          borderBottomLeftRadius: '10px',
-          borderBottomRightRadius: '10px',
-          boxShadow: 'inset 6px 0px 6px -4px #000000be',
-          touchAction: 'none'
+          touchAction: 'none',
+          userSelect: 'none',
         }}
       />
     </div>
