@@ -1,5 +1,6 @@
 @import './utilities'
 @import './_animation'
+@import './breakpoints'
 
 *
     padding: 0
@@ -26,12 +27,24 @@
     flex-direction: column
     justify-content: space-between
     align-items: center
+    overflow: visible
 
     .lets
         margin-top: 20px
+        @include xs
+            font-size: .8em
+
+        @include md
+            font-size: 1.7em
 
     .apresentation
         margin-bottom: 20px
+        @include xs
+            font-size: .8em
+            margin-bottom: 80px
+
+        @include md
+            font-size: 1.7em
 
     .botao
         height: 180px
@@ -42,6 +55,13 @@
         box-shadow: -15px 15px 20px 0px #474944ce, 5px -5px 20px 0px #f1f1f175
         cursor: pointer
         transition: box-shadow .1s linear
+
+        @include xs
+            width: 310px
+
+        @include md
+            width: 450px
+            height: 210px 
 
         .braille, .hello, .message
             @include center
@@ -89,7 +109,7 @@
 
     .light
         @include lights(apaga, 1s, linear)
-        
+
         .hello
             color: black
             font-size: 2em
@@ -99,6 +119,10 @@
             padding-right: 2px
             white-space: nowrap
             overflow: hidden
+
+            @include xs
+                font-size: 1.5em
+                margin-bottom: 30px
 
             &.cursor
                 animation: cursor .8s linear infinite, typing 2s ease, pisca .1s 4s ease, pisca .1s 4.1s ease, pisca .1s 5.5s ease, pisca .1s 5.6s ease, pisca 1.6s 6.2s linear

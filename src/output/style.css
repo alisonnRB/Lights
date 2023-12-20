@@ -170,12 +170,34 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  overflow: visible;
 }
 .home .lets {
   margin-top: 20px;
 }
+@media ((min-width: 0) and (max-width: 479px) and (orientation: portrait)) {
+  .home .lets {
+    font-size: 0.8em;
+  }
+}
+@media ((min-width: 720px) and (max-width: 959px) and (orientation: portrait)) {
+  .home .lets {
+    font-size: 1.7em;
+  }
+}
 .home .apresentation {
   margin-bottom: 20px;
+}
+@media ((min-width: 0) and (max-width: 479px) and (orientation: portrait)) {
+  .home .apresentation {
+    font-size: 0.8em;
+    margin-bottom: 80px;
+  }
+}
+@media ((min-width: 720px) and (max-width: 959px) and (orientation: portrait)) {
+  .home .apresentation {
+    font-size: 1.7em;
+  }
 }
 .home .botao {
   height: 180px;
@@ -186,6 +208,17 @@
   box-shadow: -15px 15px 20px 0px rgba(71, 73, 68, 0.8078431373), 5px -5px 20px 0px rgba(241, 241, 241, 0.4588235294);
   cursor: pointer;
   transition: box-shadow 0.1s linear;
+}
+@media ((min-width: 0) and (max-width: 479px) and (orientation: portrait)) {
+  .home .botao {
+    width: 310px;
+  }
+}
+@media ((min-width: 720px) and (max-width: 959px) and (orientation: portrait)) {
+  .home .botao {
+    width: 450px;
+    height: 210px;
+  }
 }
 .home .botao .braille, .home .botao .hello, .home .botao .message {
   display: flex;
@@ -255,6 +288,12 @@
   padding-right: 2px;
   white-space: nowrap;
   overflow: hidden;
+}
+@media ((min-width: 0) and (max-width: 479px) and (orientation: portrait)) {
+  .home .light .hello {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
 }
 .home .light .hello.cursor {
   animation: cursor 0.8s linear infinite, typing 2s ease, pisca 0.1s 4s ease, pisca 0.1s 4.1s ease, pisca 0.1s 5.5s ease, pisca 0.1s 5.6s ease, pisca 1.6s 6.2s linear;
