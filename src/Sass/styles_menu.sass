@@ -1,5 +1,6 @@
 @import './_utilities'
 @import './_animation'
+@import './breakpoints'
 
 .menu
     height: 100vh
@@ -11,7 +12,7 @@
         @include lights (apaga , 1s , linear , reverse)
 
         &.off
-            animation: apaga .5s linear 
+            animation: apaga .5s linear
 
     .card-menu-about
         z-index: 0
@@ -26,18 +27,36 @@
         box-shadow: -5px 5px 8px 0px #00000067, inset -5px 5px 20px 0px #ffffff4b
         animation: chegando .7s linear
 
+        @include xs
+            height: 280px
+            left: -20px
+            width: calc( 100vw + 30px )
+            margin: auto
+            transform: rotate(-10deg)
+
+        @include md
+            height: 390px
+            left: -40px
+            width: 700px
+            margin: auto
+            transform: rotate(-10deg)
+
         .top
             @include center
             height: 75%
             width: 100%
             gap: 30px
+            overflow: visible
+
+            @include xs
+                height: 80%
 
             .about-box
                 height: 70%
                 width: 20%
 
                 p
-                    font-size: .6em
+                    font-size: .5em
                     text-align: center
                     padding-left: 3px
                     padding-right: 3px
@@ -46,12 +65,25 @@
                     position: relative
                     left: calc(57% - 1em)
                     top: 30%
+                    white-space: nowrap
+
+                    @include xs
+                        font-size: .45em
+
+                    @include md
+                        font-size: .8em
 
             .content-about-text
                 height: 70%
                 width: 60%
                 font-size: .7em
                 overflow: visible
+
+                @include xs
+                    font-size: .6em
+
+                @include md
+                    font-size: .9em
 
         .bottom
             height: 25%
@@ -64,6 +96,9 @@
                 padding-left: 15px
                 padding-top: 5px
                 cursor: pointer
+
+                @include md
+                    font-size: 1.5em
 
     .card-menu-projects
         z-index: 10
@@ -79,6 +114,18 @@
         padding-left: 2%
         padding-right: 2%
         animation: chegando2 .4s linear
+
+        @include xs
+            height: 150px
+            width: calc( 100vw - 130px )
+            left: calc( 100% - (100vw - 110px) )
+            top: 100px
+            transform: rotate(5deg)
+
+        @include md
+            height: 200px
+            top: 80px
+            transform: rotate(8deg)
 
         .number-box
             height: 15%
@@ -105,6 +152,7 @@
         width: 100px
         position: absolute
         opacity: 0
+        margin-left: -100px
 
         &.zero
             bottom: 20px
@@ -128,5 +176,3 @@
             height: 100%
             width: 100%
             object-fit: cover
-
-
