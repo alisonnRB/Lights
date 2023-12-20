@@ -1,4 +1,5 @@
-@import './utilities'
+@import './_utilities'
+@import './_animation'
 
 .menu
     height: 100vh
@@ -129,27 +130,3 @@
             object-fit: cover
 
 
-@keyframes chegando
-    0%
-        transform: translateY(-100%) translateX(-100%) rotate(20deg)
-        box-shadow: -45px 45px 30px 40px #00000067, inset 0px 0px 0px 0px #ffffff4b
-
-    100%
-        transform: translateY(0) translateX(0) rotate(0)
-        box-shadow: -5px 5px 8px 0px #00000067, inset -5px 5px 20px 0px #ffffff4b
-
-@keyframes chegando2
-    0%
-        transform: translateY(100%) translateX(100%) rotate(20deg)
-        box-shadow: -35px 35px 30px 30px #00000067, inset 0px 0px 0px 0px #ffffff4b
-
-    100%
-        transform: translateY(0) translateX(0) rotate(0)
-        box-shadow: -5px 5px 8px 0px #00000067, inset -5px 5px 20px 0px #ffffff4b
-
-@keyframes paws
-    0%, 100%
-        opacity: 0
-
-    50%
-        opacity: 1

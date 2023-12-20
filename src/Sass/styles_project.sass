@@ -1,4 +1,5 @@
-@import './utilities'
+@import './_utilities'
+@import './_animation'
     
 .projects
     height: 100vh
@@ -138,51 +139,3 @@
             bottom: 10px
             left: 10px
             cursor: pointer
-
-@keyframes title-surge
-    0%
-        height: 0
-        width: 0
-
-    10%
-        height: 13%
-        width: 0
-
-    100%
-        height: 13%
-        width: 50%
-
-@keyframes letter-surge
-    0%
-        color: #47494400
-        width: 0
-        padding-right: 0
-
-    50%
-        color: #47494400
-        width: 0
-        padding-right: 0
-
-    100%
-        color: #474944c7
-        padding-right: 30px
-        width: 6em
-
-@keyframes card-open
-    0%
-        height: 80%
-        width: 0%
-
-    100%
-        height: 100%
-        width: 65%
-
-@keyframes content
-    0%
-        opacity: 0
-
-    40%
-        opacity: 0
-
-    100%
-        opacity: 1

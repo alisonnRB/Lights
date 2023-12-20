@@ -1,4 +1,5 @@
 @import './utilities'
+@import './_animation'
 
 *
     padding: 0
@@ -102,46 +103,3 @@
             &.cursor
                 animation: cursor .8s linear infinite, typing 2s ease, pisca .1s 4s ease, pisca .1s 4.1s ease, pisca .1s 5.5s ease, pisca .1s 5.6s ease, pisca 1.6s 6.2s linear
                 animation-timing-function: steps(11, end)
-
-@keyframes apaga
-    0%
-        opacity: 0
-        box-shadow: inset 0px 0px 0px 0px black
-
-    100%
-        opacity: 1
-        box-shadow: inset 0px 0px 100% 0px black
-
-@keyframes cursor
-    0%
-        border-right: solid 2px #ffffffbd
-
-    50%
-        border-right: solid 2px #ffffffbd
-
-    50.5%
-        border-right: solid 2px #ffffff00
-
-    100%
-        border-right: solid 2px #ffffff00
-
-@keyframes typing
-    0%
-        width: 0px
-
-    100%
-        width: 7em
-
-@keyframes pisca
-    0%
-        opacity: 1
-
-    100%
-        opacity: 0
-
-@keyframes pisca
-    0%
-        opacity: 1
-
-    50%, 100%
-        opacity: 0
