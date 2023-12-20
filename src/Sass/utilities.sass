@@ -1,0 +1,25 @@
+$light-of-lamp: ( "top-left": -10px -10px 25px 10px, "top-center": 0px -10px 25px 10px, "top-right": 10px -10px 25px 10px, "bottom-left": -10px 10px 25px 10px, "bottom-center": 0px 10px 25px 10px, "bottom-right": 10px 10px 25px 10px)
+
+@mixin center
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin lights ($animation, $time, $type, $case: '')
+    @include center
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 100
+    height: 100vh
+    width: 100vw
+    background-color: black
+    animation: $animation $time $type $case
+
+@mixin lamps($color, $position, $delay)
+    $color-opacity: rgba($color, .4)
+    $lightness: map-get($light-of-lamp, $position)
+
+    box-shadow: 0px 0px 8vw 4vw $color-opacity, inset 0px 0px 100px 10px $color-opacity, inset $lightness #ffffffbe
+    transition: all 1s $delay ease
+    background-color: $color

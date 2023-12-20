@@ -85,7 +85,7 @@ export default function MySkills() {
             const timeoutId8 = setTimeout(() => {
                 setOpen(false);
                 clearTimeout(timeoutId8);
-            }, 4200);
+            }, 4100);
 
             const timeoutId9 = setTimeout(() => {
                 navigate('/menu');

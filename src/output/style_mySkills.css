@@ -6,17 +6,20 @@
   box-shadow: inset 0px 0px 100px 50px black;
 }
 .mySkills .light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   height: 100vh;
   width: 100vw;
-  box-shadow: inset 0px 0px 100vw 50vw black;
-  animation: acende 1s linear;
+  background-color: black;
+  animation: apaga 1s linear reverse;
 }
 .mySkills .light.turn {
-  animation: acende 1s linear reverse;
+  animation: apaga 1s linear;
 }
 .mySkills .filtro {
   position: fixed;
@@ -127,7 +130,7 @@
   color: white;
 }
 .mySkills .lamps .row .turn.zero {
-  box-shadow: 0px 0px 200px 50px rgba(97, 218, 251, 0.7450980392), inset 0px 0px 100px 10px rgba(97, 218, 251, 0.7450980392), inset -10px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
+  box-shadow: 0px 0px 8vw 4vw rgba(97, 218, 251, 0.4), inset 0px 0px 100px 10px rgba(97, 218, 251, 0.4), inset -10px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 1s ease;
   background-color: #61DAFB;
 }
@@ -135,7 +138,7 @@
   transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.one {
-  box-shadow: 0px 0px 200px 50px rgba(105, 122, 177, 0.7450980392), inset 0px 0px 100px 10px rgba(105, 122, 177, 0.7450980392), inset 0px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
+  box-shadow: 0px 0px 8vw 4vw rgba(105, 122, 177, 0.4), inset 0px 0px 100px 10px rgba(105, 122, 177, 0.4), inset 0px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 3.8s ease;
   background-color: #697AB1;
 }
@@ -143,7 +146,7 @@
   transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.two {
-  box-shadow: 0px 0px 200px 50px rgba(198, 99, 148, 0.7450980392), inset 0px 0px 100px 10px rgba(198, 99, 148, 0.7450980392), inset 0px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
+  box-shadow: 0px 0px 8vw 4vw rgba(198, 99, 148, 0.4), inset 0px 0px 100px 10px rgba(198, 99, 148, 0.4), inset 0px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 4s ease;
   background-color: #C66394;
 }
@@ -151,7 +154,7 @@
   transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.three {
-  box-shadow: 0px 0px 200px 50px rgba(139, 191, 61, 0.7450980392), inset 0px 0px 100px 10px rgba(139, 191, 61, 0.7450980392), inset 10px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
+  box-shadow: 0px 0px 8vw 4vw rgba(139, 191, 61, 0.4), inset 0px 0px 100px 10px rgba(139, 191, 61, 0.4), inset 10px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 3.5s ease;
   background-color: #8BBF3D;
 }
@@ -159,7 +162,7 @@
   transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.four {
-  box-shadow: 0px 0px 200px 50px rgba(232, 77, 49, 0.7450980392), inset 0px 0px 100px 10px rgba(232, 77, 49, 0.7450980392), inset -10px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
+  box-shadow: 0px 0px 8vw 4vw rgba(232, 77, 49, 0.4), inset 0px 0px 100px 10px rgba(232, 77, 49, 0.4), inset -10px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 4s ease;
   background-color: #E84D31;
 }
@@ -167,7 +170,7 @@
   transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.five {
-  box-shadow: 0px 0px 200px 50px rgba(18, 151, 209, 0.7450980392), inset 0px 0px 100px 10px rgba(18, 151, 209, 0.7450980392), inset 0px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
+  box-shadow: 0px 0px 8vw 4vw rgba(18, 151, 209, 0.4), inset 0px 0px 100px 10px rgba(18, 151, 209, 0.4), inset 0px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 4.2s ease;
   background-color: #1297D1;
 }
@@ -175,7 +178,7 @@
   transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.six {
-  box-shadow: 0px 0px 200px 50px rgba(233, 98, 40, 0.7450980392), inset 0px 0px 100px 10px rgba(233, 98, 40, 0.7450980392), inset 0px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
+  box-shadow: 0px 0px 8vw 4vw rgba(233, 98, 40, 0.4), inset 0px 0px 100px 10px rgba(233, 98, 40, 0.4), inset 0px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 2s ease;
   background-color: #E96228;
 }
@@ -183,7 +186,7 @@
   transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.seven {
-  box-shadow: 0px 0px 200px 50px rgba(0, 116, 208, 0.7450980392), inset 0px 0px 100px 10px rgba(0, 116, 208, 0.7450980392), inset 0px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
+  box-shadow: 0px 0px 8vw 4vw rgba(0, 116, 208, 0.4), inset 0px 0px 100px 10px rgba(0, 116, 208, 0.4), inset 0px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 4.2s ease;
   background-color: #0074D0;
 }
@@ -191,7 +194,7 @@
   transition: all 0.3s 0s ease;
 }
 .mySkills .lamps .row .turn.eight {
-  box-shadow: 0px 0px 200px 50px rgba(239, 216, 29, 0.7450980392), inset 0px 0px 100px 10px rgba(239, 216, 29, 0.7450980392), inset 10px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
+  box-shadow: 0px 0px 8vw 4vw rgba(239, 216, 29, 0.4), inset 0px 0px 100px 10px rgba(239, 216, 29, 0.4), inset 10px 10px 25px 10px rgba(255, 255, 255, 0.7450980392);
   transition: all 1s 3s ease;
   background-color: #EFD81D;
 }

@@ -1,3 +1,5 @@
+@import './utilities'
+    
 .projects
     height: 100vh
     width: 100vw
@@ -7,17 +9,10 @@
     padding-bottom: 100px
 
     .light
-        position: fixed
-        top: 0
-        left: 0
-        z-index: 100
-        height: 100vh
-        width: 100vw
-        box-shadow: inset 0px 0px 100vw 50vw black
-        animation: acende 1s linear
+        @include lights (apaga , 1s , linear , reverse)
 
         &.off
-            animation: acende 1s linear reverse
+            animation: apaga 1s linear
 
     .title
         position: relative
@@ -54,13 +49,11 @@
         overflow: visible
 
         .content-project
+            @include center
             height: 300px
             width: 100%
-            display: flex
             margin-top: 100px
             overflow: visible
-            align-items: center
-            justify-content: center
 
             .card
                 height: 100%
@@ -113,7 +106,7 @@
                         width: 100%
                         font-size: .5em
                         color: #e4e0dd88
-    
+
     .coming
         width: 100%
         height: 100px
@@ -190,6 +183,6 @@
 
     40%
         opacity: 0
-    
+
     100%
         opacity: 1

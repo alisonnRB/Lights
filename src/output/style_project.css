@@ -7,17 +7,20 @@
   padding-bottom: 100px;
 }
 .projects .light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   height: 100vh;
   width: 100vw;
-  box-shadow: inset 0px 0px 100vw 50vw black;
-  animation: acende 1s linear;
+  background-color: black;
+  animation: apaga 1s linear reverse;
 }
 .projects .light.off {
-  animation: acende 1s linear reverse;
+  animation: apaga 0.5s linear;
 }
 .projects .title {
   position: relative;
@@ -54,13 +57,13 @@
   overflow: visible;
 }
 .projects .content-cards .content-project {
-  height: 300px;
-  width: 100%;
   display: flex;
-  margin-top: 100px;
-  overflow: visible;
   align-items: center;
   justify-content: center;
+  height: 300px;
+  width: 100%;
+  margin-top: 100px;
+  overflow: visible;
 }
 .projects .content-cards .content-project .card {
   height: 100%;

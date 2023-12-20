@@ -5,17 +5,20 @@
   background-size: 1366px 768px;
 }
 .menu .light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   height: 100vh;
   width: 100vw;
-  box-shadow: inset 0px 0px 100vw 50vw black;
-  animation: acende 1s linear;
+  background-color: black;
+  animation: apaga 1s linear reverse;
 }
 .menu .light.off {
-  animation: acende 0.5s linear reverse;
+  animation: apaga 0.5s linear;
 }
 .menu .card-menu-about {
   z-index: 0;
@@ -31,11 +34,11 @@
   animation: chegando 0.7s linear;
 }
 .menu .card-menu-about .top {
-  height: 75%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 75%;
+  width: 100%;
   gap: 30px;
 }
 .menu .card-menu-about .top .about-box {
@@ -140,14 +143,6 @@
   object-fit: cover;
 }
 
-@keyframes acende {
-  0% {
-    box-shadow: inset 0px 0px 100vw 50vw black;
-  }
-  100% {
-    box-shadow: inset 0px 0px 0vw 0vw black;
-  }
-}
 @keyframes chegando {
   0% {
     transform: translateY(-100%) translateX(-100%) rotate(20deg);
