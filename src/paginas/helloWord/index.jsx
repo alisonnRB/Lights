@@ -11,9 +11,14 @@ export default function Home() {
     useEffect(() => {
         if (!turn) {
           const timeoutId = setTimeout(() => {
-            setCode(true);
-          }, 100);
-          return () => clearTimeout(timeoutId);
+            setTurn(true);
+            clearTimeout(timeoutId)
+          }, 250);
+
+          const timeoutIds = setTimeout(() => {
+            setCode(true)
+            clearTimeout(timeoutIds)
+          }, 500);
         }
       }, [turn]);
 

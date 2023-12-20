@@ -185,7 +185,7 @@
   display: block;
   box-shadow: -15px 15px 20px 0px rgba(71, 73, 68, 0.8078431373), 5px -5px 20px 0px rgba(241, 241, 241, 0.4588235294);
   cursor: pointer;
-  transition: box-shadow 0.05s linear;
+  transition: box-shadow 0.1s linear;
 }
 .home .botao .braille, .home .botao .hello, .home .botao .message {
   display: flex;
@@ -244,7 +244,7 @@
   height: 100vh;
   width: 100vw;
   background-color: black;
-  animation: apaga 0.7s linear "";
+  animation: apaga 1s linear "";
 }
 .home .light .hello {
   color: black;
