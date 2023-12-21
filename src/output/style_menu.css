@@ -285,12 +285,12 @@
 }
 @media ((min-width: 0) and (max-width: 479px) and (orientation: portrait)) {
   .menu .card-menu-about .top .content-about-text {
-    font-size: 0.6em;
+    font-size: 0.55em;
   }
 }
 @media ((min-width: 720px) and (max-width: 959px) and (orientation: portrait)) {
   .menu .card-menu-about .top .content-about-text {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 }
 @media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
