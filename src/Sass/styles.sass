@@ -29,6 +29,39 @@
     align-items: center
     overflow: visible
 
+    .social
+        display: flex
+        flex-direction: column
+        gap: 10px
+        position: absolute
+        left: 20px
+        top: 10px
+
+        @include por
+            flex-direction: row
+            left: calc( 50% - 40px )
+            top: calc( 100vh - 50px )
+
+        @include md
+            flex-direction: column
+            left: 20px
+            top: 10px
+
+        @include lg
+            flex-direction: column
+            left: 20px
+            top: 10px
+
+        @include xl
+            flex-direction: column
+            left: 20px
+            top: 10px
+
+        a
+            img
+                height: 40px
+                width: 40px
+
     .lets
         margin-top: 20px
         @include xs
@@ -61,7 +94,7 @@
 
         @include md
             width: 450px
-            height: 210px 
+            height: 210px
 
         .braille, .hello, .message
             @include center
