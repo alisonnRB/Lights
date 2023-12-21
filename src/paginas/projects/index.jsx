@@ -20,8 +20,8 @@ export default function Projects() {
             'ref': 'https://www.literary-ihm.com',
             'git': 'https://github.com/alisonnRB/IHM.git',
             'ready': true,
-            'activity' : 'O IHM foi um projeto extendso e denso feito com objetivo de aprimorar minhas habilidades com o desenvolvimento web.',
-            'text': 'IHM é uma rede social literateraria, que permite escevrever e ler livros assim como permite a interação entre os usuarios.'
+            'activity' : 'O IHM foi um projeto extenso e denso, realizado com o objetivo de aprimorar minhas habilidades no desenvolvimento web.',
+            'text': 'IHM é uma rede social literária que permite escrever e ler livros, além de possibilitar a interação entre os usuários.'
         },
 
         1: {
@@ -31,8 +31,8 @@ export default function Projects() {
             'ref': '',
             'git': 'https://github.com/alisonnRB/Palabraria',
             'ready': false,
-            'activity': 'O projeto Palabraria está sendo feito por itermédio de uma bolsa promovida pelo IFRS com objetivo de melhorar a qualidade de ensino da lingua espanhola.',
-            'text': 'Um dicionário ilustrado e livre de lingua espanhola com onjetivo de ampliar o repertório da lingua de uma maneira cooperativa com as instituições educacionais'
+            'activity': 'O projeto Palabraria está sendo realizado por meio de uma bolsa promovida pelo IFRS, com o objetivo de aprimorar a qualidade do ensino da língua espanhola.',
+            'text': 'Um dicionário ilustrado e gratuito da língua espanhola, com o objetivo de ampliar o repertório linguístico de maneira colaborativa com as instituições educacionais.'
         },
     }
 
