@@ -195,6 +195,33 @@
     transform: rotate(-10deg);
   }
 }
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
+  .menu .card-menu-about {
+    height: 390px;
+    left: -40px;
+    width: 700px;
+    margin: auto;
+    transform: rotate(-10deg);
+  }
+}
+@media ((min-width: 1200px) and (orientation: portrait)) {
+  .menu .card-menu-about {
+    height: 390px;
+    left: -40px;
+    width: 700px;
+    margin: auto;
+    transform: rotate(-10deg);
+  }
+}
+@media ((min-width: 480px) and (max-width: 719px) and (orientation: portrait)) {
+  .menu .card-menu-about {
+    height: 390px;
+    left: -40px;
+    width: 700px;
+    margin: auto;
+    transform: rotate(-10deg);
+  }
+}
 .menu .card-menu-about .top {
   display: flex;
   align-items: center;
@@ -235,6 +262,21 @@
     font-size: 0.8em;
   }
 }
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
+  .menu .card-menu-about .top .about-box p {
+    font-size: 0.8em;
+  }
+}
+@media ((min-width: 1200px) and (orientation: portrait)) {
+  .menu .card-menu-about .top .about-box p {
+    font-size: 0.8em;
+  }
+}
+@media ((min-width: 480px) and (max-width: 719px) and (orientation: portrait)) {
+  .menu .card-menu-about .top .about-box p {
+    font-size: 0.8em;
+  }
+}
 .menu .card-menu-about .top .content-about-text {
   height: 70%;
   width: 60%;
@@ -249,6 +291,21 @@
 @media ((min-width: 720px) and (max-width: 959px) and (orientation: portrait)) {
   .menu .card-menu-about .top .content-about-text {
     font-size: 0.9em;
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
+  .menu .card-menu-about .top .content-about-text {
+    ont-size: 0.9em;
+  }
+}
+@media ((min-width: 1200px) and (orientation: portrait)) {
+  .menu .card-menu-about .top .content-about-text {
+    ont-size: 0.9em;
+  }
+}
+@media ((min-width: 480px) and (max-width: 719px) and (orientation: portrait)) {
+  .menu .card-menu-about .top .content-about-text {
+    ont-size: 0.9em;
   }
 }
 .menu .card-menu-about .bottom {
@@ -268,6 +325,21 @@
     font-size: 1.5em;
   }
 }
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
+  .menu .card-menu-about .bottom p {
+    font-size: 1.5em;
+  }
+}
+@media ((min-width: 1200px) and (orientation: portrait)) {
+  .menu .card-menu-about .bottom p {
+    font-size: 1.5em;
+  }
+}
+@media ((min-width: 480px) and (max-width: 719px) and (orientation: portrait)) {
+  .menu .card-menu-about .bottom p {
+    font-size: 1.5em;
+  }
+}
 .menu .card-menu-projects {
   z-index: 10;
   height: 216px;
@@ -277,7 +349,7 @@
   display: block;
   position: relative;
   left: 48%;
-  top: -5%;
+  top: 0%;
   box-shadow: -5px 5px 8px 0px rgba(0, 0, 0, 0.4039215686), inset -5px 5px 20px 0px rgba(255, 255, 255, 0.2941176471);
   padding-left: 2%;
   padding-right: 2%;
@@ -286,13 +358,34 @@
 @media ((min-width: 0) and (max-width: 479px) and (orientation: portrait)) {
   .menu .card-menu-projects {
     height: 150px;
-    width: calc(100vw - 130px);
+    width: calc(100vw - 180px);
     left: calc(100% - (100vw - 110px));
     top: 100px;
     transform: rotate(5deg);
   }
 }
 @media ((min-width: 720px) and (max-width: 959px) and (orientation: portrait)) {
+  .menu .card-menu-projects {
+    height: 200px;
+    top: 80px;
+    transform: rotate(8deg);
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
+  .menu .card-menu-projects {
+    height: 200px;
+    top: 80px;
+    transform: rotate(8deg);
+  }
+}
+@media ((min-width: 480px) and (max-width: 719px) and (orientation: portrait)) {
+  .menu .card-menu-projects {
+    height: 200px;
+    top: 80px;
+    transform: rotate(8deg);
+  }
+}
+@media ((min-width: 1200px) and (orientation: portrait)) {
   .menu .card-menu-projects {
     height: 200px;
     top: 80px;

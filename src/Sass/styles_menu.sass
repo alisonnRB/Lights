@@ -41,6 +41,27 @@
             margin: auto
             transform: rotate(-10deg)
 
+        @include lg
+            height: 390px
+            left: -40px
+            width: 700px
+            margin: auto
+            transform: rotate(-10deg)
+
+        @include xl
+            height: 390px
+            left: -40px
+            width: 700px
+            margin: auto
+            transform: rotate(-10deg)
+
+        @include sm
+            height: 390px
+            left: -40px
+            width: 700px
+            margin: auto
+            transform: rotate(-10deg)
+
         .top
             @include center
             height: 75%
@@ -73,6 +94,15 @@
                     @include md
                         font-size: .8em
 
+                    @include lg
+                        font-size: .8em
+
+                    @include xl
+                        font-size: .8em
+
+                    @include sm
+                        font-size: .8em
+
             .content-about-text
                 height: 70%
                 width: 60%
@@ -84,6 +114,15 @@
 
                 @include md
                     font-size: .9em
+
+                @include lg
+                        ont-size: .9em
+                
+                @include xl
+                        ont-size: .9em
+
+                @include sm
+                        ont-size: .9em
 
         .bottom
             height: 25%
@@ -100,6 +139,15 @@
                 @include md
                     font-size: 1.5em
 
+                @include lg
+                    font-size: 1.5em
+
+                @include xl
+                    font-size: 1.5em
+
+                @include sm
+                    font-size: 1.5em
+
     .card-menu-projects
         z-index: 10
         height: 216px
@@ -109,7 +157,7 @@
         display: block
         position: relative
         left: 48%
-        top: -5%
+        top: 0%
         box-shadow: -5px 5px 8px 0px #00000067, inset -5px 5px 20px 0px #ffffff4b
         padding-left: 2%
         padding-right: 2%
@@ -117,12 +165,27 @@
 
         @include xs
             height: 150px
-            width: calc( 100vw - 130px )
+            width: calc( 100vw - 180px )
             left: calc( 100% - (100vw - 110px) )
             top: 100px
             transform: rotate(5deg)
 
         @include md
+            height: 200px
+            top: 80px
+            transform: rotate(8deg)
+
+        @include lg
+            height: 200px
+            top: 80px
+            transform: rotate(8deg)
+
+        @include sm
+            height: 200px
+            top: 80px
+            transform: rotate(8deg)
+
+        @include xl
             height: 200px
             top: 80px
             transform: rotate(8deg)
