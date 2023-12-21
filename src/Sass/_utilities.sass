@@ -1,3 +1,4 @@
+@import './_breakpoints'
 $light-of-lamp: ( "top-left": -10px -10px 25px 10px, "top-center": 0px -10px 25px 10px, "top-right": 10px -10px 25px 10px, "bottom-left": -10px 10px 25px 10px, "bottom-center": 0px 10px 25px 10px, "bottom-right": 10px 10px 25px 10px)
 
 @mixin center
@@ -23,3 +24,6 @@ $light-of-lamp: ( "top-left": -10px -10px 25px 10px, "top-center": 0px -10px 25p
     box-shadow: 0px 0px 8vw 4vw $color-opacity, inset 0px 0px 100px 10px $color-opacity, inset $lightness #ffffffbe
     transition: all 1s $delay ease
     background-color: $color
+
+    @include xs
+        box-shadow: 0px 0px 40vw 10vw $color-opacity, inset 0px 0px 100px 10px $color-opacity, inset $lightness #ffffffbe

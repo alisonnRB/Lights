@@ -1,11 +1,11 @@
 @import './_utilities'
 @import './_animation'
-    
+@import './_breakpoints'
+
 .mySkills
     height: 100vh
     width: 100vw
     background-color: #241f1f
-    background-size: 700px 350px
     box-shadow: inset 0px 0px 100px 50px black
 
     .light
@@ -32,6 +32,30 @@
         justify-content: center
         z-index: 10
 
+        @include xs
+            left: 10px
+            zoom: 1.4
+        
+        @include md
+            left: 10px
+            zoom: 1.4
+
+        @include lg
+            left: 10px
+            zoom: 1.4
+
+        @include md(landscape)
+            left: 10px
+            zoom: 1.4
+
+        @include xs(landscape)
+            left: 10px
+            zoom: 1.4
+
+        @include sm(landscape)
+            left: 10px
+            zoom: 1.4
+
     .ropes
         background-image: url('../drawble/corda.png')
         background-size: 500% 100%
@@ -46,6 +70,34 @@
         top: 10px
         width: 80px
         font-size: .9em
+
+        @include xs
+            left: 100px
+            zoom: 1.4
+        
+        @include md
+            left: 100px
+            zoom: 1.4
+
+        @include lg
+            left: 100px
+            zoom: 1.4
+        
+        @include md(landscape)
+            left: 100px
+            zoom: 1
+        
+        @include xs(landscape)
+            left: 100px
+            zoom: 1
+        
+        @include sm(landscape)
+            left: 100px
+            zoom: 1
+
+        @include lg(landscape)
+            left: 100px
+            zoom: 1
 
         &.on.turn
             animation: hint-hiden 1s ease reverse
@@ -99,6 +151,42 @@
         left: 28%
         overflow: visible
 
+        @include xs
+            left: 15%
+            top: 30%
+            display: flex
+
+        @include md
+            left: 28%
+            top: 25%
+            display: flex
+
+        @include lg
+            left: 28%
+            top: 25%
+            display: flex
+
+        @include xl
+            left: 0
+            top: 45%
+            display: flex
+
+        @include md(landscape)
+            left: 20%
+            top: 50%
+
+        @include xs(landscape)
+            left: 20%
+            top: 50%
+        
+        @include sm(landscape)
+            left: 20%
+            top: 50%
+
+        @include lg(landscape)
+            left: 20%
+            top: 50%
+
         .lamp
             height: 90px
             width: 90px
@@ -110,12 +198,67 @@
             z-index: 20
             position: relative
 
+            @include xs
+                height: 60px
+                width: 60px
+                margin-bottom: -30px
+            
+            
+            @include md(landscape)
+                height: 60px
+                width: 60px
+                margin-right: -10px
+        
+            @include xs(landscape)
+                height: 60px
+                width: 60px
+                margin-right: -10px
+
+            @include sm(landscape)
+                height: 60px
+                width: 60px
+                margin-right: -10px
+
+
         .row
             display: flex
             flex-direction: row
             gap: 50px
             margin-bottom: 20px
             overflow: visible
+
+            @include xs
+                flex-direction: column
+            
+            @include md
+                flex-direction: column
+
+            @include xl
+                flex-direction: column
+
+            @include lg
+                flex-direction: column
+
+            .eight
+                @include xs
+                    margin-left: -100%
+                    margin-top: -20px
+
+                @include md
+                    margin-left: -80%
+                    margin-top: -20px
+
+                @include xl
+                    margin-left: -80%
+                    margin-top: -20px
+
+                @include lg
+                    margin-left: -80%
+                    margin-top: -20px
+
+                @include sm
+                    margin-left: -80%
+                    margin-top: -20px
 
             .turn
                 border: solid 1px #ffffff00
@@ -185,4 +328,3 @@
         .row:first-child
             padding-left: 60px
             padding-right: 60px
-
