@@ -1,6 +1,7 @@
 @import './_utilities'
 @import './_animation'
-    
+@import './_breakpoints'
+
 .projects
     height: 100vh
     width: 100vw
@@ -13,7 +14,7 @@
         @include lights (apaga , 1s , linear , reverse)
 
         &.off
-            animation: apaga 1s linear
+            animation: apaga 1s ease
 
     .title
         position: relative
@@ -43,11 +44,14 @@
                 white-space: nowrap
                 overflow: hidden
 
+                @include por
+                    font-size: 1em
+
     .content-cards
         margin-top: 70px
         min-height: 100%
         width: 100vw
-        overflow: visible
+        overflow: hidden
 
         .content-project
             @include center
@@ -56,22 +60,71 @@
             margin-top: 100px
             overflow: visible
 
+            @include por
+                height: 200px
+
+            @include lg
+                height: 300px
+
+            @include xl
+                height: 350px
+
             .card
                 height: 100%
                 width: 65%
                 background-color: #423932
                 display: flex
                 box-shadow: -10px 15px 20px 0px #000000e3
-                text-decoration: none
-                cursor: pointer
                 border-radius: 10px
                 animation: card-open .5s ease
 
-                img
+                @include por
+                    width: 95%
+
+                @include lg
+                    width: 80%
+
+                @include xl
+                    width: 70%
+
+                @include land
+                    width: 95%
+
+                @include lg(landscape)
+                    width: 80%
+
+                @include xl(landscape)
+                    width: 70%
+
+                &.hovered-reverse
+                    flex-direction: row-reverse
+
+                    .imagem
+                        animation: move-card-hover-row 1s ease
+
+                    .content-infos
+                        opacity: 0
+
+                &.hovered-row
+                    flex-direction: row
+
+                    .imagem
+                        animation: move-card-hover-reverse 1s ease
+
+                    .content-infos
+                        opacity: 0
+
+                .imagem
+                    z-index: 10
                     width: 30%
                     object-fit: contain
                     height: 100%
-                    animation: content 1s ease
+
+                    &.row
+                        animation: move-card-hover-row 1s ease
+
+                    &.reverse
+                        animation: move-card-hover-reverse 1s ease
 
                 .content-infos
                     width: 70%
@@ -79,7 +132,6 @@
                     padding-left: 3%
                     padding-right: 3%
                     padding-top: 3%
-                    animation: content 1s ease
 
                     .title
                         width: 100%
@@ -89,15 +141,46 @@
                         color: #E4E0DD
                         font-size: 1.5em
 
+                        @include por
+                            font-size: .8em
+                            height: 10%
+
+                        @include lg
+                            font-size: 1em
+
+                        @include xl
+                            font-size: 1.5em
+
+                        @include land
+                            font-size: .8em
+
+                        @include lg(landscape)
+                            font-size: 1em
+
+                        @include xl(landscape)
+                            font-size: 1.5em
+
                     .desc
                         width: 100%
                         height: 70%
                         display: flex
                         padding-top: 20px
 
+                        @include por
+                            height: 80%
+
                         p
                             color: #E4E0DD
                             font-size: .8em
+
+                            @include por
+                                font-size: .5em
+
+                            @include lg
+                                font-size: .8em
+
+                            @include xl
+                                font-size: 1em
 
                     .coming-soon
                         display: flex
@@ -107,6 +190,105 @@
                         width: 100%
                         font-size: .5em
                         color: #e4e0dd88
+
+                .content-links
+                    width: 70%
+                    height: 100%
+                    padding-left: 3%
+                    padding-right: 3%
+                    padding-top: 3%
+                    display: flex
+
+                    &.row
+                        flex-direction: row
+
+                        .activity
+                            text-align: end
+
+                    &.reverse
+                        flex-direction: row-reverse
+
+                        .activity
+                            text-align: start
+
+                    .activity
+                        height: 100%
+                        width: 100%
+                        padding: 3%
+                        color: white
+
+                        @include por
+                            font-size: .55em
+                            width: 80%
+
+                        @include lg
+                            font-size: .8em
+
+                        @include xl
+                            font-size: 1em
+
+                        @include land
+                            font-size: .6em
+
+                        @include lg(landscape)
+                            font-size: 1em
+
+                        @include xl(landscape)
+                            font-size: 1em
+
+                    .links
+                        height: 100%
+                        width: 30%
+                        display: flex
+                        flex-direction: row-reverse
+                        align-items: flex-end
+                        gap: 20px
+                        padding-bottom: 3%
+
+
+                        a
+                            display: flex
+                            flex-direction: column
+                            gap: 5px
+                            align-items: center
+
+                            span
+                                font-size: .3em
+                                color: white
+
+                                @include por
+                                    font-size: .1em
+
+                            img
+                                height: 40px
+                                width: 40px
+
+                                @include por
+                                    height: 20px
+                                    width: 20px
+
+                                @include lg
+                                    height: 30px
+                                    width: 30px
+
+                                @include xl
+                                    height: 40px
+                                    width: 40px
+
+                                @include land
+                                    height: 20px
+                                    width: 20px
+
+                                @include lg(landscape)
+                                    height: 30px
+                                    width: 30px
+
+                                @include xl(landscape)
+                                    height: 40px
+                                    width: 40px
+
+                            .atalho
+                                transform: rotateY(180deg) rotateX(180deg)
 
     .coming
         width: 100%
@@ -119,6 +301,9 @@
         font-size: 2em
         font-weight: bold
 
+        @include por
+            font-size: 1em
+
     .back-card
         background-image: url('../drawble/texture_card_projects.png')
         height: 100px
@@ -129,7 +314,8 @@
         transform: rotate(-25deg)
         position: absolute
         top: -60px
-        right: -70px
+        right: -80px
+        display: none
 
         p
             border-top: solid 1.5px #5F534E
@@ -139,3 +325,25 @@
             bottom: 10px
             left: 10px
             cursor: pointer
+
+@keyframes move-card-hover-row
+    0%
+        position: relative
+        flex-direction: row
+        left: -70%
+
+    100%
+        position: relative
+        flex-direction: row
+        left: 0
+
+@keyframes move-card-hover-reverse
+    0%
+        position: relative
+        flex-direction: row-reverse
+        left: 70%
+
+    100%
+        position: relative
+        flex-direction: row-reverse
+        left: 0

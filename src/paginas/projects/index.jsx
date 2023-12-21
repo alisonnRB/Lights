@@ -13,8 +13,27 @@ export default function Projects() {
     const [openContent, setOpenContent] = useState(false)
     const [turn, setTurn] = useState(false);
     const list = {
-        0: { 'img': ihm, 'bg': 'white', 'name': 'IHM', 'ref': 'https:\\www.literary-ihm.com', 'ready': true, 'text': 'IHM é uma rede social literateraria, que permite escevrever e ler livros assim como permite a interação entre os usuarios.' },
-        1: { 'img': palabraria, 'bg': 'black', 'name': 'Palabraria', 'ref': '', 'ready': false, 'text': 'Um dicionário ilustrado e livre de lingua espanhola com onjetivo de ampliar o repertório da lingua de uma maneira cooperativa com as instituições educacionais' },
+        0: {
+            'img': ihm,
+            'bg': 'white',
+            'name': 'IHM',
+            'ref': 'https://www.literary-ihm.com',
+            'git': 'https://github.com/alisonnRB/IHM.git',
+            'ready': true,
+            'activity' : 'O IHM foi um projeto extendso e denso feito com objetivo de aprimorar minhas habilidades com o desenvolvimento web.',
+            'text': 'IHM é uma rede social literateraria, que permite escevrever e ler livros assim como permite a interação entre os usuarios.'
+        },
+
+        1: {
+            'img': palabraria,
+            'bg': 'black',
+            'name': 'Palabraria',
+            'ref': '',
+            'git': 'https://github.com/alisonnRB/Palabraria',
+            'ready': false,
+            'activity': 'O projeto Palabraria está sendo feito por itermédio de uma bolsa promovida pelo IFRS com objetivo de melhorar a qualidade de ensino da lingua espanhola.',
+            'text': 'Um dicionário ilustrado e livre de lingua espanhola com onjetivo de ampliar o repertório da lingua de uma maneira cooperativa com as instituições educacionais'
+        },
     }
 
     useEffect(() => {
@@ -48,7 +67,7 @@ export default function Projects() {
     const Navigate_menu = () => {
         setTurn(true);
         setOpen(false);
-        
+
         const timeoutId = setTimeout(() => {
             navigate('/menu')
         }, 1000);

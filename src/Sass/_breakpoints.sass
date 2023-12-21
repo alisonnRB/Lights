@@ -19,3 +19,11 @@ $breakpoints: ("xs" : 0, "sm" : 480px, "md" : 720px, "lg" : 960px, "xl" : 1200px
 @mixin xl($orientation : portrait)
     @media ( (min-width: map-get($breakpoints, "xl")) and (orientation: $orientation))
         @content
+
+@mixin por
+    @media (orientation: portrait)
+        @content
+
+@mixin land
+    @media (orientation: landscape)
+        @content

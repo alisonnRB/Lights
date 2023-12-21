@@ -164,7 +164,7 @@
   animation: apaga 1s linear reverse;
 }
 .projects .light.off {
-  animation: apaga 1s linear;
+  animation: apaga 1s ease;
 }
 .projects .title {
   position: relative;
@@ -194,11 +194,16 @@
   white-space: nowrap;
   overflow: hidden;
 }
+@media (orientation: portrait) {
+  .projects .title.turn p {
+    font-size: 1em;
+  }
+}
 .projects .content-cards {
   margin-top: 70px;
   min-height: 100%;
   width: 100vw;
-  overflow: visible;
+  overflow: hidden;
 }
 .projects .content-cards .content-project {
   display: flex;
@@ -209,22 +214,89 @@
   margin-top: 100px;
   overflow: visible;
 }
+@media (orientation: portrait) {
+  .projects .content-cards .content-project {
+    height: 200px;
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
+  .projects .content-cards .content-project {
+    height: 300px;
+  }
+}
+@media ((min-width: 1200px) and (orientation: portrait)) {
+  .projects .content-cards .content-project {
+    height: 350px;
+  }
+}
 .projects .content-cards .content-project .card {
   height: 100%;
   width: 65%;
   background-color: #423932;
   display: flex;
   box-shadow: -10px 15px 20px 0px rgba(0, 0, 0, 0.8901960784);
-  text-decoration: none;
-  cursor: pointer;
   border-radius: 10px;
   animation: card-open 0.5s ease;
 }
-.projects .content-cards .content-project .card img {
+@media (orientation: portrait) {
+  .projects .content-cards .content-project .card {
+    width: 95%;
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
+  .projects .content-cards .content-project .card {
+    width: 80%;
+  }
+}
+@media ((min-width: 1200px) and (orientation: portrait)) {
+  .projects .content-cards .content-project .card {
+    width: 70%;
+  }
+}
+@media (orientation: landscape) {
+  .projects .content-cards .content-project .card {
+    width: 95%;
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: landscape)) {
+  .projects .content-cards .content-project .card {
+    width: 80%;
+  }
+}
+@media ((min-width: 1200px) and (orientation: landscape)) {
+  .projects .content-cards .content-project .card {
+    width: 70%;
+  }
+}
+.projects .content-cards .content-project .card.hovered-reverse {
+  flex-direction: row-reverse;
+}
+.projects .content-cards .content-project .card.hovered-reverse .imagem {
+  animation: move-card-hover-row 1s ease;
+}
+.projects .content-cards .content-project .card.hovered-reverse .content-infos {
+  opacity: 0;
+}
+.projects .content-cards .content-project .card.hovered-row {
+  flex-direction: row;
+}
+.projects .content-cards .content-project .card.hovered-row .imagem {
+  animation: move-card-hover-reverse 1s ease;
+}
+.projects .content-cards .content-project .card.hovered-row .content-infos {
+  opacity: 0;
+}
+.projects .content-cards .content-project .card .imagem {
+  z-index: 10;
   width: 30%;
   object-fit: contain;
   height: 100%;
-  animation: content 1s ease;
+}
+.projects .content-cards .content-project .card .imagem.row {
+  animation: move-card-hover-row 1s ease;
+}
+.projects .content-cards .content-project .card .imagem.reverse {
+  animation: move-card-hover-reverse 1s ease;
 }
 .projects .content-cards .content-project .card .content-infos {
   width: 70%;
@@ -232,7 +304,6 @@
   padding-left: 3%;
   padding-right: 3%;
   padding-top: 3%;
-  animation: content 1s ease;
 }
 .projects .content-cards .content-project .card .content-infos .title {
   width: 100%;
@@ -242,15 +313,66 @@
   color: #E4E0DD;
   font-size: 1.5em;
 }
+@media (orientation: portrait) {
+  .projects .content-cards .content-project .card .content-infos .title {
+    font-size: 0.8em;
+    height: 10%;
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
+  .projects .content-cards .content-project .card .content-infos .title {
+    font-size: 1em;
+  }
+}
+@media ((min-width: 1200px) and (orientation: portrait)) {
+  .projects .content-cards .content-project .card .content-infos .title {
+    font-size: 1.5em;
+  }
+}
+@media (orientation: landscape) {
+  .projects .content-cards .content-project .card .content-infos .title {
+    font-size: 0.8em;
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: landscape)) {
+  .projects .content-cards .content-project .card .content-infos .title {
+    font-size: 1em;
+  }
+}
+@media ((min-width: 1200px) and (orientation: landscape)) {
+  .projects .content-cards .content-project .card .content-infos .title {
+    font-size: 1.5em;
+  }
+}
 .projects .content-cards .content-project .card .content-infos .desc {
   width: 100%;
   height: 70%;
   display: flex;
   padding-top: 20px;
 }
+@media (orientation: portrait) {
+  .projects .content-cards .content-project .card .content-infos .desc {
+    height: 80%;
+  }
+}
 .projects .content-cards .content-project .card .content-infos .desc p {
   color: #E4E0DD;
   font-size: 0.8em;
+}
+@media (orientation: portrait) {
+  .projects .content-cards .content-project .card .content-infos .desc p {
+    font-size: 0.5em;
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
+  .projects .content-cards .content-project .card .content-infos .desc p {
+    font-size: 0.8em;
+  }
+}
+@media ((min-width: 1200px) and (orientation: portrait)) {
+  .projects .content-cards .content-project .card .content-infos .desc p {
+    font-size: 1em;
+  }
 }
 .projects .content-cards .content-project .card .content-infos .coming-soon {
   display: flex;
@@ -260,6 +382,130 @@
   width: 100%;
   font-size: 0.5em;
   color: rgba(228, 224, 221, 0.5333333333);
+}
+.projects .content-cards .content-project .card .content-links {
+  width: 70%;
+  height: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 3%;
+  display: flex;
+}
+.projects .content-cards .content-project .card .content-links.row {
+  flex-direction: row;
+}
+.projects .content-cards .content-project .card .content-links.row .activity {
+  text-align: end;
+}
+.projects .content-cards .content-project .card .content-links.reverse {
+  flex-direction: row-reverse;
+}
+.projects .content-cards .content-project .card .content-links.reverse .activity {
+  text-align: start;
+}
+.projects .content-cards .content-project .card .content-links .activity {
+  height: 100%;
+  width: 100%;
+  padding: 3%;
+  color: white;
+}
+@media (orientation: portrait) {
+  .projects .content-cards .content-project .card .content-links .activity {
+    font-size: 0.55em;
+    width: 80%;
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
+  .projects .content-cards .content-project .card .content-links .activity {
+    font-size: 0.8em;
+  }
+}
+@media ((min-width: 1200px) and (orientation: portrait)) {
+  .projects .content-cards .content-project .card .content-links .activity {
+    font-size: 1em;
+  }
+}
+@media (orientation: landscape) {
+  .projects .content-cards .content-project .card .content-links .activity {
+    font-size: 0.6em;
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: landscape)) {
+  .projects .content-cards .content-project .card .content-links .activity {
+    font-size: 1em;
+  }
+}
+@media ((min-width: 1200px) and (orientation: landscape)) {
+  .projects .content-cards .content-project .card .content-links .activity {
+    font-size: 1em;
+  }
+}
+.projects .content-cards .content-project .card .content-links .links {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  gap: 20px;
+  padding-bottom: 3%;
+}
+.projects .content-cards .content-project .card .content-links .links a {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+.projects .content-cards .content-project .card .content-links .links a span {
+  font-size: 0.3em;
+  color: white;
+}
+@media (orientation: portrait) {
+  .projects .content-cards .content-project .card .content-links .links a span {
+    font-size: 0.1em;
+  }
+}
+.projects .content-cards .content-project .card .content-links .links a img {
+  height: 40px;
+  width: 40px;
+}
+@media (orientation: portrait) {
+  .projects .content-cards .content-project .card .content-links .links a img {
+    height: 20px;
+    width: 20px;
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
+  .projects .content-cards .content-project .card .content-links .links a img {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media ((min-width: 1200px) and (orientation: portrait)) {
+  .projects .content-cards .content-project .card .content-links .links a img {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media (orientation: landscape) {
+  .projects .content-cards .content-project .card .content-links .links a img {
+    height: 20px;
+    width: 20px;
+  }
+}
+@media ((min-width: 960px) and (max-width: 1199px) and (orientation: landscape)) {
+  .projects .content-cards .content-project .card .content-links .links a img {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media ((min-width: 1200px) and (orientation: landscape)) {
+  .projects .content-cards .content-project .card .content-links .links a img {
+    height: 40px;
+    width: 40px;
+  }
+}
+.projects .content-cards .content-project .card .content-links .links a .atalho {
+  transform: rotateY(180deg) rotateX(180deg);
 }
 .projects .coming {
   width: 100%;
@@ -272,6 +518,11 @@
   font-size: 2em;
   font-weight: bold;
 }
+@media (orientation: portrait) {
+  .projects .coming {
+    font-size: 1em;
+  }
+}
 .projects .back-card {
   background-image: url("../drawble/texture_card_projects.png");
   height: 100px;
@@ -282,7 +533,8 @@
   transform: rotate(-25deg);
   position: absolute;
   top: -60px;
-  right: -70px;
+  right: -80px;
+  display: none;
 }
 .projects .back-card p {
   border-top: solid 1.5px #5F534E;
@@ -292,6 +544,31 @@
   bottom: 10px;
   left: 10px;
   cursor: pointer;
+}
+
+@keyframes move-card-hover-row {
+  0% {
+    position: relative;
+    flex-direction: row;
+    left: -70%;
+  }
+  100% {
+    position: relative;
+    flex-direction: row;
+    left: 0;
+  }
+}
+@keyframes move-card-hover-reverse {
+  0% {
+    position: relative;
+    flex-direction: row-reverse;
+    left: 70%;
+  }
+  100% {
+    position: relative;
+    flex-direction: row-reverse;
+    left: 0;
+  }
 }
 
 /*# sourceMappingURL=style_project.css.map */
