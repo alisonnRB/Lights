@@ -79,9 +79,10 @@ export default function Menu() {
 
                     <div className="content-about-text">
                         <p>
-                            Hello! I'm Álison, a cat and coffee lover looking for opportunities to show what I love most, coding.
-                            I believe in the power of collaboration and I look forward to working with people.
-                            Let's create something amazing together! 🚀☕🐾
+                            Hello! I'm Álison, a full stack developer passionate about transforming ideas into digital reality.
+                            With solid back-end and front-end skills.
+                            Outside of the world of code, my heart beats for cats and a good cup of coffee.
+                            Let's create something amazing together?☕🐾
                         </p>
                     </div>
                 </div>
