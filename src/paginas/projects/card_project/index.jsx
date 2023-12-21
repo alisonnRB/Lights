@@ -15,17 +15,9 @@ export default function Card_project(props) {
         }
     }, [inView]);
 
-    const cancelAnimation = () => {
-        const timeoutId = setTimeout(() => {
-            setHovered(false);
-
-        }, 500);
-        return () => clearTimeout(timeoutId);
-    }
-
     return (
         <div ref={ref} className="content-project">
-            {open ? <div onMouseEnter={() => { setHovered(true) }} onMouseLeave={() => { cancelAnimation() }} className={`card ${hovered ? (props.index % 2 == 0 ? 'hovered-reverse' : 'hovered-row') : null}`} style={!hovered ? props.index % 2 == 0 ? { flexDirection: 'row' } : { flexDirection: 'row-reverse' } : null}>
+            {open ? <div onMouseEnter={() => { setHovered(true) }} onMouseLeave={() => { setHovered(false) }} className={`card ${hovered ? (props.index % 2 == 0 ? 'hovered-reverse' : 'hovered-row') : null}`} style={!hovered ? props.index % 2 == 0 ? { flexDirection: 'row' } : { flexDirection: 'row-reverse' } : null}>
                 <img src={props.infos.img} alt={props.infos.name + ' logotipo'} style={{ backgroundColor: props.infos.bg }} className={`imagem ${!hovered ? (props.index % 2 == 0 ? 'reverse' : 'row') : null}`} />
 
                 {!hovered ?
