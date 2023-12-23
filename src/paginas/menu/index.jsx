@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { LanguageContext } from "../../provider";
+import words from './language.json';
 
 import '../../output/style_menu.css';
 
 import Paw from "./paw";
 
 export default function Menu() {
+    const { language } = useContext(LanguageContext);
+
     const [open, setOpen] = useState(false);
     const [turn, setTurn] = useState(false);
 
@@ -74,30 +79,27 @@ export default function Menu() {
             {card1 ? <div className="card-menu-about">
                 <div className="top">
                     <div className="about-box">
-                        <p>ABOUT ME</p>
+                        <p>{words[language].about}</p>
                     </div>
 
                     <div className="content-about-text">
                         <p>
-                            Hello! I'm Álison, a full stack developer passionate about transforming ideas into digital reality.
-                            With solid back-end and front-end skills.
-                            Outside of the world of code, my heart beats for cats and a good cup of coffee.
-                            Let's create something amazing together?☕🐾
+                        {words[language].text}☕🐾
                         </p>
                     </div>
                 </div>
 
                 <div className="bottom">
-                    <p onClick={() => { Navigate_mySkills() }}>My skills</p>
+                    <p onClick={() => { Navigate_mySkills() }}>{words[language].skills}</p>
                 </div>
             </div> : null}
 
             {card2 ? <div className="card-menu-projects">
                 <p className="number-box">02</p>
-                <p className="title-box">PROJECTS</p>
+                <p className="title-box">{words[language].project}</p>
 
                 <div className="content-see">
-                    <p onClick={() => { Navigate_myProjects() }}>See my projects</p>
+                    <p onClick={() => { Navigate_myProjects() }}>{words[language].look}</p>
                 </div>
             </div> : null}
 

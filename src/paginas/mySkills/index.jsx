@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import '../../output/style_mySkills.css';
 
+import { LanguageContext } from "../../provider";
+import words from './language.json';
 import engrenagem from '../../drawble/engrenagem.png';
 
 import Rope from './rope/index';
 
 export default function MySkills() {
     const navigate = useNavigate();
+    const { language } = useContext(LanguageContext);
     const [open, setOpen] = useState(false);
     const [action, setAction] = useState(false);
 
@@ -110,8 +113,8 @@ export default function MySkills() {
 
             <>
                 <Rope action={action} setAction={setAction} operations={operations} />
-                {!hints ? <p className={`instruction ${operations ? 'turn' : null}`}>Pull to turn on the system!!</p> : null}
-                {!hints ? null : <p className={`instruction on turn`}>Pull to return options</p>}
+                {!hints ? <p className={`instruction ${operations ? 'turn' : null}`}>{words[language].first_hint}</p> : null}
+                {!hints ? null : <p className={`instruction on turn`}>{words[language].last_hint}</p>}
             </>
 
             <div className="operations">

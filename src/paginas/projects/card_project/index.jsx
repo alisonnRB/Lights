@@ -55,7 +55,7 @@ export default function Card_project(props) {
                         <div className="content-infos" style={{ animation: 'content 1s ease' }}>
                             <div className="title" style={props.index % 2 == 0 ? { justifyContent: 'start' } : { justifyContent: 'end' }}>{props.infos.name}</div>
                             <div className="desc" style={props.index % 2 == 0 ? { textAlign: "left" } : { textAlign: "right" }}>
-                                <p>{props.infos.text}</p>
+                                <p>{props.language == 'pt' ? props.infos.text : props.infos.text_en}</p>
                             </div>
                             {!props.infos.ready ? <div className="coming-soon" style={props.index % 2 == 0 ? { justifyContent: 'end' } : { justifyContent: 'start' }}>coming soon . . .</div> : null}
                         </div>
@@ -65,7 +65,7 @@ export default function Card_project(props) {
                             <div className="links" style={{ animation: 'content 1s ease' }}>
 
                                 <a href={props.infos.git}>
-                                    <span>Repository</span>
+                                    <span>{props.language == 'pt' ? 'Repositório' : 'Repositoy'}</span>
                                     <img src={gitHub} alt="GitHub logotipo" />
                                 </a>
 
@@ -79,7 +79,7 @@ export default function Card_project(props) {
                             </div>
 
                             <div className="activity" style={{ animation: 'content 1s ease' }}>
-                                {props.infos.activity}
+                                {props.language == 'pt' ? props.infos.activity : props.infos.activity_en}
                             </div>
 
                         </div>
