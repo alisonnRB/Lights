@@ -1,0 +1,13 @@
+{
+    "en": {
+        "project" : "My projects",
+        "new" : "New projects coming soon . . .",
+        "back" : "return"
+    },
+
+    "pt": {
+        "project" : "Meus projetos",
+        "new" : "Novos projetos em breve . . .",
+        "back" : "Voltar"
+    }
+}

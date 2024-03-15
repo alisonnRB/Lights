@@ -1,0 +1,13 @@
+{
+    "en": {
+        "lets_say" : "Let's say hello to the world together?",
+        "click" : "click here and let's go",
+        "meet" : "My name is Álison, nice to meet you!"
+    },
+
+    "pt": {
+        "lets_say" : "Vamos dizer ''hello world'' juntos?",
+        "click" : "clique aqui e vamos lá",
+        "meet" : "Meu nome é Álison, prazer em conhecê-lo!"
+    }
+}

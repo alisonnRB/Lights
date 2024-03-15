@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import '../../output/style_project.css';
+
+import { LanguageContext } from "../../provider";
+import words from './language.json';
 
 import Card_project from "./card_project";
 
@@ -8,6 +11,7 @@ import ihm from '../../drawble/IHM.png';
 import palabraria from '../../drawble/Palabraria.png';
 
 export default function Projects() {
+    const { language } = useContext(LanguageContext);
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
     const [openContent, setOpenContent] = useState(false)
@@ -20,8 +24,10 @@ export default function Projects() {
             'ref': 'https://www.literary-ihm.com',
             'git': 'https://github.com/alisonnRB/IHM.git',
             'ready': true,
-            'activity' : 'O IHM foi um projeto extenso e denso, realizado com o objetivo de aprimorar minhas habilidades no desenvolvimento web.',
-            'text': 'IHM é uma rede social literária que permite escrever e ler livros, além de possibilitar a interação entre os usuários.'
+            'activity': 'O IHM foi um projeto extenso e denso, realizado com o objetivo de aprimorar minhas habilidades no desenvolvimento web.',
+            'activity_en' : 'IHM was an extensive and dense project, carried out with the aim of improving my web development skills.',
+            'text': 'IHM é uma rede social literária que permite escrever e ler livros, além de possibilitar a interação entre os usuários.',
+            'text_en' : 'IHM is a literary social network that allows you to write and read books, as well as enabling interaction between users.'
         },
 
         1: {
@@ -57,7 +63,7 @@ export default function Projects() {
         const itens = [];
 
         for (let i = 0; i < Object.keys(list).length; i++) {
-            let a = <Card_project key={i} index={i} infos={list[i]} />
+            let a = <Card_project key={i} index={i} infos={list[i]} language={language}/>
             itens.push(a);
         }
 
@@ -79,17 +85,17 @@ export default function Projects() {
             {!open ? <div className={`light ${turn ? 'off' : null}`}></div> : null}
 
             <div className={`title ${open ? 'turn' : null}`}>
-                <p>My Projects</p>
+                <p>{words[language].project}</p>
             </div>
 
             {openContent ? <div className="content-cards">
                 {gera_cards()}
 
-                <div className="coming">New projects coming soon . . .</div>
+                <div className="coming">{words[language].new}</div>
             </div> : null}
 
             <div className="back-card">
-                <p onClick={() => { Navigate_menu() }}>Return</p>
+                <p onClick={() => { Navigate_menu() }}>{words[language].back}</p>
             </div>
 
         </div>

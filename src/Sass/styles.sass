@@ -29,6 +29,31 @@
     align-items: center
     overflow: visible
 
+    .change-language
+        position: absolute
+        right: 20px
+        top: 10px
+        font-size: 1em
+        cursor: pointer
+
+        @include por
+            top: calc( 100vh - 40px )
+
+        @include md
+            right: 20px
+            top: 10px
+
+        @include lg
+            right: 20px
+            top: 10px
+
+        @include xl
+            right: 20px
+            top: 10px
+
+    .change-language:hover
+        border-bottom: 1px solid black
+
     .social
         display: flex
         flex-direction: column

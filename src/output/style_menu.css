@@ -280,7 +280,7 @@
 .menu .card-menu-about .top .content-about-text {
   height: 70%;
   width: 60%;
-  font-size: 0.7em;
+  font-size: 0.68em;
   overflow: visible;
 }
 @media ((min-width: 0) and (max-width: 479px) and (orientation: portrait)) {
@@ -295,17 +295,17 @@
 }
 @media ((min-width: 960px) and (max-width: 1199px) and (orientation: portrait)) {
   .menu .card-menu-about .top .content-about-text {
-    ont-size: 0.9em;
+    font-size: 0.9em;
   }
 }
 @media ((min-width: 1200px) and (orientation: portrait)) {
   .menu .card-menu-about .top .content-about-text {
-    ont-size: 0.9em;
+    font-size: 0.9em;
   }
 }
 @media ((min-width: 480px) and (max-width: 719px) and (orientation: portrait)) {
   .menu .card-menu-about .top .content-about-text {
-    ont-size: 0.9em;
+    font-size: 0.9em;
   }
 }
 .menu .card-menu-about .bottom {
