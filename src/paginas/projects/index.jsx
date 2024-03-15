@@ -29,9 +29,9 @@ export default function Projects() {
             'bg': 'black',
             'name': 'Palabraria',
             'ref': '',
-            'git': 'https://github.com/alisonnRB/Palabraria',
+            'git': 'https://github.com/alisonnRB/new-palabraria',
             'ready': false,
-            'activity': 'O projeto Palabraria está sendo realizado por meio de uma bolsa promovida pelo IFRS, com o objetivo de aprimorar a qualidade do ensino da língua espanhola.',
+            'activity': 'O projeto Palabraria foi realizado por meio de uma bolsa promovida pelo IFRS, com o objetivo de aprimorar a qualidade do ensino da língua espanhola. Com um servidor com paradgma orientado a objetos.',
             'text': 'Um dicionário ilustrado e gratuito da língua espanhola, com o objetivo de ampliar o repertório linguístico de maneira colaborativa com as instituições educacionais.'
         },
     }
