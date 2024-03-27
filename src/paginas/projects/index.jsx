@@ -48,7 +48,7 @@ export default function Projects() {
             'img': lines,
             'bg': '#f1f1f1',
             'name': 'Analist-color',
-            'ref': 'Analist-color.vercel.app',
+            'ref': 'https://Analist-color.vercel.app',
             'git': 'https://github.com/alisonnRB/Interface-analist-color',
             'ready': true,
             'text': 'O projeto Analsit-color é na verdade um interface para interagir com a api criada por mim, sendo uma ferramenta para designs mais personalizados.',
