@@ -51,10 +51,10 @@ export default function Projects() {
             'ref': 'Analist-color.vercel.app',
             'git': 'https://github.com/alisonnRB/Interface-analist-color',
             'ready': true,
-            'activity': 'O projeto Analsit-color é na verdade um interface para interagir com a api criada por mim, sendo uma ferramenta para designs mais personalizados.',
-            'activity_en': 'The Analsit-color project is actually an interface to interact with the api created by me, being a tool for more personalized designs.',
-            'text': 'A interface foi construída em Vue.js e interage com a api criada em laravel mostrando as principais caracteristicas de cor em uma imagem.',
-            'text_en': 'The interface was built in Vue.js and interacts with the api created in Laravel, showing the main color characteristics in an image.'
+            'text': 'O projeto Analsit-color é na verdade um interface para interagir com a api criada por mim, sendo uma ferramenta para designs mais personalizados.',
+            'text_en': 'The Analsit-color project is actually an interface to interact with the api created by me, being a tool for more personalized designs.',
+            'activity': 'A interface foi construída em Vue.js e interage com a api criada em laravel mostrando as principais caracteristicas de cor em uma imagem.',
+            'activity_en': 'The interface was built in Vue.js and interacts with the api created in Laravel, showing the main color characteristics in an image.'
         },
     }
 
