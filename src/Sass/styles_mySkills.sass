@@ -148,7 +148,7 @@
     .lamps
         position: absolute
         top: 35%
-        left: 28%
+        left: 22%
         overflow: visible
 
         @include xs
@@ -314,6 +314,18 @@
 
                 &.eight
                     @include lamps(#EFD81D, bottom-right, 3s)
+
+                    &.fail
+                        transition: all .3s 0s ease
+
+                &.nine
+                    @include lamps(#FF3528, bottom-right, 4s)
+
+                    &.fail
+                        transition: all .3s 0s ease
+
+                &.ten
+                    @include lamps(#08C384, top-right, 4.4s)
 
                     &.fail
                         transition: all .3s 0s ease

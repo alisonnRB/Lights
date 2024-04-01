@@ -129,12 +129,14 @@ export default function MySkills() {
                     <div className={`lamp ${operations ? 'turn' : null} one ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>PHP</div>
                     <div className={`lamp ${operations ? 'turn' : null} two ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>Sass</div>
                     <div className={`lamp ${operations ? 'turn' : null} three ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>NodeJS</div>
+                    <div className={`lamp ${operations ? 'turn' : null} ten ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>VueJS</div>
                 </span>
                 <span className="row">
                     <div className={`lamp ${operations ? 'turn' : null} four ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>GIT</div>
                     <div className={`lamp ${operations ? 'turn' : null} five ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>CSS</div>
                     <div className={`lamp ${operations ? 'turn' : null} six ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>HTML</div>
                     <div className={`lamp ${operations ? 'turn' : null} seven ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>SQL</div>
+                    <div className={`lamp ${operations ? 'turn' : null} nine ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>Laravel</div>
                     <div className={`lamp ${operations ? 'turn' : null} eight ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>JS</div>
                 </span>
             </div>

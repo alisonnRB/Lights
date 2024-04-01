@@ -38,8 +38,8 @@ export default function Projects() {
             'ref': '',
             'git': 'https://github.com/alisonnRB/new-palabraria',
             'ready': false,
-            'activity': 'O projeto Palabraria foi realizado por meio de uma bolsa promovida pelo IFRS, com o objetivo de aprimorar a qualidade do ensino da língua espanhola. Com um servidor com paradgma orientado a objetos.',
-            'activity_en': 'The Palabraria project was carried out through a grant promoted by IFRS, with the aim of improving the quality of Spanish language teaching. With a server with an object-oriented paradigm',
+            'activity': 'O projeto Palabraria foi realizado por meio de uma bolsa promovida pelo IFRS, Com um servidor com paradgma orientado a objetos.',
+            'activity_en': 'The Palabraria project was carried out through a grant promoted by IFRS, With a server with an object-oriented paradigm',
             'text': 'Um dicionário ilustrado e gratuito da língua espanhola, com o objetivo de ampliar o repertório linguístico de maneira colaborativa com as instituições educacionais.',
             'text_en': 'A free illustrated dictionary of the Spanish language, with the aim of expanding the linguistic repertoire in a collaborative way with educational institutions.'
         },
@@ -51,8 +51,8 @@ export default function Projects() {
             'ref': 'https://analist-color.vercel.app/',
             'git': 'https://github.com/alisonnRB/Interface-analist-color',
             'ready': true,
-            'text': 'O projeto Analsit-color é na verdade um interface para interagir com a api criada por mim, sendo uma ferramenta para designs mais personalizados.',
-            'text_en': 'The Analsit-color project is actually an interface to interact with the api created by me, being a tool for more personalized designs.',
+            'text': 'O projeto Analist-color é na verdade um interface para interagir com a api criada por mim, sendo uma ferramenta para designs mais personalizados.',
+            'text_en': 'The Analist-color project is actually an interface to interact with the api created by me, being a tool for more personalized designs.',
             'activity': 'A interface foi construída em Vue.js e interage com a api criada em laravel mostrando as principais caracteristicas de cor em uma imagem.',
             'activity_en': 'The interface was built in Vue.js and interacts with the api created in Laravel, showing the main color characteristics in an image.'
         },
