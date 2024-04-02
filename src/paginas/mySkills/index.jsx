@@ -130,6 +130,7 @@ export default function MySkills() {
                     <div className={`lamp ${operations ? 'turn' : null} two ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>Sass</div>
                     <div className={`lamp ${operations ? 'turn' : null} three ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>NodeJS</div>
                     <div className={`lamp ${operations ? 'turn' : null} ten ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>VueJS</div>
+                    <div className={`lamp ${operations ? 'turn' : null} eleven ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>TS</div>
                 </span>
                 <span className="row">
                     <div className={`lamp ${operations ? 'turn' : null} four ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>GIT</div>
