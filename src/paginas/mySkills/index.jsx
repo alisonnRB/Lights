@@ -138,6 +138,7 @@ export default function MySkills() {
                     <div className={`lamp ${operations ? 'turn' : null} six ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>HTML</div>
                     <div className={`lamp ${operations ? 'turn' : null} seven ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>SQL</div>
                     <div className={`lamp ${operations ? 'turn' : null} nine ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>Laravel</div>
+                    <div className={`lamp ${operations ? 'turn' : null} twice ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>TailWind</div>
                     <div className={`lamp ${operations ? 'turn' : null} eight ${blackout ? 'off' : null} ${fail ? 'fail' : null}`}>JS</div>
                 </span>
             </div>

@@ -35,7 +35,7 @@
         @include xs
             left: 10px
             zoom: 1.4
-        
+
         @include md
             left: 10px
             zoom: 1.4
@@ -74,7 +74,7 @@
         @include xs
             left: 100px
             zoom: 1.4
-        
+
         @include md
             left: 100px
             zoom: 1.4
@@ -82,15 +82,15 @@
         @include lg
             left: 100px
             zoom: 1.4
-        
+
         @include md(landscape)
             left: 100px
             zoom: 1
-        
+
         @include xs(landscape)
             left: 100px
             zoom: 1
-        
+
         @include sm(landscape)
             left: 100px
             zoom: 1
@@ -178,7 +178,7 @@
         @include xs(landscape)
             left: 20%
             top: 50%
-        
+
         @include sm(landscape)
             left: 20%
             top: 50%
@@ -202,13 +202,12 @@
                 height: 60px
                 width: 60px
                 margin-bottom: -30px
-            
-            
+
             @include md(landscape)
                 height: 60px
                 width: 60px
                 margin-right: -10px
-        
+
             @include xs(landscape)
                 height: 60px
                 width: 60px
@@ -219,7 +218,6 @@
                 width: 60px
                 margin-right: -10px
 
-
         .row
             display: flex
             flex-direction: row
@@ -229,7 +227,7 @@
 
             @include xs
                 flex-direction: column
-            
+
             @include md
                 flex-direction: column
 
@@ -332,6 +330,12 @@
 
                 &.eleven
                     @include lamps(#377CC8, top-right, 4.4s)
+
+                    &.fail
+                        transition: all .3s 0s ease
+
+                &.twice
+                    @include lamps(#18AFBB, top-right, 2.3s)
 
                     &.fail
                         transition: all .3s 0s ease

@@ -606,6 +606,19 @@
 .mySkills .lamps .row .turn.eleven.fail {
   transition: all 0.3s 0s ease;
 }
+.mySkills .lamps .row .turn.twice {
+  box-shadow: 0px 0px 8vw 4vw rgba(24, 175, 187, 0.4), inset 0px 0px 100px 10px rgba(24, 175, 187, 0.4), inset 10px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
+  transition: all 1s 2.3s ease;
+  background-color: #18AFBB;
+}
+@media ((min-width: 0) and (max-width: 479px) and (orientation: portrait)) {
+  .mySkills .lamps .row .turn.twice {
+    box-shadow: 0px 0px 40vw 10vw rgba(24, 175, 187, 0.4), inset 0px 0px 100px 10px rgba(24, 175, 187, 0.4), inset 10px -10px 25px 10px rgba(255, 255, 255, 0.7450980392);
+  }
+}
+.mySkills .lamps .row .turn.twice.fail {
+  transition: all 0.3s 0s ease;
+}
 .mySkills .lamps .row .turn.off {
   box-shadow: 0px 0px 0px 0px #fff;
   background-color: transparent;

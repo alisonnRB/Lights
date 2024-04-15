@@ -10,6 +10,7 @@ import Card_project from "./card_project";
 import ihm from '../../drawble/IHM.png';
 import palabraria from '../../drawble/Palabraria.png';
 import lines from '../../drawble/lines.png';
+import myQuest from '../../drawble/myquest.png';
 
 export default function Projects() {
     const { language } = useContext(LanguageContext);
@@ -55,6 +56,19 @@ export default function Projects() {
             'text_en': 'The Analist-color project is actually an interface to interact with the api created by me, being a tool for more personalized designs.',
             'activity': 'A interface foi construída em Vue.js e interage com a api criada em laravel mostrando as principais caracteristicas de cor em uma imagem.',
             'activity_en': 'The interface was built in Vue.js and interacts with the api created in Laravel, showing the main color characteristics in an image.'
+        },
+
+        3: {
+            'img': myQuest,
+            'bg': '#162238',
+            'name': 'myQuest',
+            'ref': 'https://my-quest-sigma.vercel.app/',
+            'git': 'https://github.com/alisonnRB/myQuest',
+            'ready': true,
+            'text': 'O myQuest é um ferramenta criada para auxiliar no estudo das mais diversas areas, podendo criar perguntas de forma inteligente.',
+            'text_en': 'myQuest is a tool created to assist in the study of the most diverse areas, being able to create questions intelligently.',
+            'activity': 'Essa aplicação foi criada com Angular e tailwind e interage com a API da IA Gemini, para contruir as quests.',
+            'activity_en': 'This application was created with Angular and tailwind and interacts with the Gemini AI API to build the quests.'
         },
     }
 
