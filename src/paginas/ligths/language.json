@@ -1,11 +1,11 @@
 {
     "en": {
-        "first_hint" : "Pull to turn on the system!!",
-        "last_hint" : "Pull to return options"
+        "first_hint" : "Pull to start!!",
+        "pause" : "Pull to pause!"
     },
 
     "pt": {
-        "first_hint" : "Puxe para ligar o sistema!!",
-        "last_hint" : "Puxe para voltar as opções"
+        "first_hint" : "Puxe para iniciar!!",
+        "pause" : "Puxe para pausar!"
     }
 }

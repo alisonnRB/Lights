@@ -1,0 +1,111 @@
+@import './_utilities'
+@import './_animation'
+@import './_breakpoints'
+
+.mySkills
+    height: 100vh
+    width: 100vw
+    background-color: #241f1f
+    box-shadow: inset 0px 0px 100px 50px black
+
+    .light
+        @include lights (apaga , 1s , linear , reverse)
+
+        &.turn
+            animation: apaga 1s linear
+
+
+    .content-rope
+        position: absolute
+        left: 20px
+        height: 300px
+        width: 100px
+        display: flex
+        justify-content: center
+        z-index: 10
+
+        @include xs
+            left: 10px
+            zoom: 1.4
+
+        @include md
+            left: 10px
+            zoom: 1.4
+
+        @include lg
+            left: 10px
+            zoom: 1.4
+
+        @include md(landscape)
+            left: 10px
+            zoom: 1.4
+
+        @include xs(landscape)
+            left: 10px
+            zoom: 1.4
+
+        @include sm(landscape)
+            left: 10px
+            zoom: 1.4
+
+    .ropes
+        background-image: url('../assets/corda.png')
+        background-size: 500% 100%
+        background-repeat: no-repeat
+        background-position: center
+
+    .instruction
+        position: relative
+        z-index: 20
+        color: #ffffff86
+        left: 100px
+        top: 10px
+        width: 80px
+        font-size: .9em
+
+        @include xs
+            left: 100px
+            zoom: 1.4
+
+        @include md
+            left: 100px
+            zoom: 1.4
+
+        @include lg
+            left: 100px
+            zoom: 1.4
+
+        @include md(landscape)
+            left: 100px
+            zoom: 1
+
+        @include xs(landscape)
+            left: 100px
+            zoom: 1
+
+        @include sm(landscape)
+            left: 100px
+            zoom: 1
+
+        @include lg(landscape)
+            left: 100px
+            zoom: 1
+
+        &.turn
+            animation: hint-hiden 1s ease reverse
+
+    .lampsContent
+        background: pink
+        position: absolute
+        top: 0
+        height: 100%
+        width: 100%
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        padding-bottom: 30px
+
+        .lamps
+            background: orange
+            height: 85%
+            width: 70%
