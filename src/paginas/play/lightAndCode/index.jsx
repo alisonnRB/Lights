@@ -33,7 +33,7 @@ export default function Light_and_code() {
     useEffect(() => {
         if (move) {
             const timeoutId = setTimeout(() => {
-                navigate('/Menu');
+                navigate('/Play');
             }, 1000);
 
             return () => clearTimeout(timeoutId);
