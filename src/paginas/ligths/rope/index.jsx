@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useGesture } from 'react-use-gesture';
 
-import Ropes from '../../../drawble/corda.png';
-
 export default function Rope(props) {
   const [grabbing, setGrabbing] = useState(false)
   const [action, setAction] = useState(false);

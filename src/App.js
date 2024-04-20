@@ -1,12 +1,10 @@
-import './output/style.css';
+import './output/index.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './provider';
 
-import Home from './paginas/helloWord/index';
-import Menu from './paginas/menu/index';
-import MySkills from './paginas/mySkills';
-import Projects from './paginas/projects';
+import Play from './paginas/play/index';
+import Ligths from './paginas/ligths/index';
 
 function App() {
 
@@ -14,10 +12,8 @@ function App() {
     <Router>
       <LanguageProvider >
         <Routes>
-          <Route exact path='*' element={<Home />} />
-          <Route path="/Menu/" element={<Menu />} />
-          <Route path="/Menu/mySkills" element={<MySkills />} />
-          <Route path="/Menu/projects" element={<Projects />} />
+          <Route exact path='*' element={<Play />} />
+          <Route path="/play" element={<Ligths />} />
         </Routes>
       </LanguageProvider>
     </Router>

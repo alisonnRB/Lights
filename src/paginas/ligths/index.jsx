@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import '../../output/style_mySkills.css';
 
 import { LanguageContext } from "../../provider";
 import words from './language.json';
-import engrenagem from '../../drawble/engrenagem.png';
 
 import Rope from './rope/index';
 
@@ -116,12 +114,6 @@ export default function MySkills() {
                 {!hints ? <p className={`instruction ${operations ? 'turn' : null}`}>{words[language].first_hint}</p> : null}
                 {!hints ? null : <p className={`instruction on turn`}>{words[language].last_hint}</p>}
             </>
-
-            <div className="operations">
-                <img className={`engrenagem zero ${operations ? 'turn' : null}`} src={engrenagem} alt="engrenagem" />
-                <img className={`engrenagem one ${operations ? 'turn' : null}`} src={engrenagem} alt="engrenagem" />
-                <img className={`engrenagem two ${operations ? 'turn' : null}`} src={engrenagem} alt="engrenagem" />
-            </div>
 
             <div className="lamps">
                 <span className="row">

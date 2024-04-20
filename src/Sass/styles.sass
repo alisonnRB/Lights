@@ -1,31 +1,10 @@
-@import './utilities'
-@import './_animation'
-@import './breakpoints'
-
-*
-    padding: 0
-    margin: 0
-    font-family: 'forum'
-    font-size: 1.1em
-    color: #474944c7
-    box-sizing: border-box
-    overflow: hidden
-
-::-webkit-scrollbar
-    background-color: #E4E0DD
-    width: 3px
-
-::-webkit-scrollbar-thumb
-    background-color: #474944c7
-
 .home
     height: 100vh
     width: 100vw
     background: rgb(192,189,185)
     background: linear-gradient(45deg, rgba(192,189,185,1) 73%, rgba(221,217,213,1) 96%)
     display: flex
-    flex-direction: column
-    justify-content: space-between
+    justify-content: center
     align-items: center
     overflow: visible
 
@@ -54,55 +33,10 @@
     .change-language:hover
         border-bottom: 1px solid black
 
-    .social
-        display: flex
-        flex-direction: column
-        gap: 10px
-        position: absolute
-        left: 20px
-        top: 10px
-
-        @include por
-            flex-direction: row
-            left: calc( 50% - 40px )
-            top: calc( 100vh - 50px )
-
-        @include md
-            flex-direction: column
-            left: 20px
-            top: 10px
-
-        @include lg
-            flex-direction: column
-            left: 20px
-            top: 10px
-
-        @include xl
-            flex-direction: column
-            left: 20px
-            top: 10px
-
         a
             img
                 height: 40px
                 width: 40px
-
-    .lets
-        margin-top: 20px
-        @include xs
-            font-size: .8em
-
-        @include md
-            font-size: 1.7em
-
-    .apresentation
-        margin-bottom: 20px
-        @include xs
-            font-size: .8em
-            margin-bottom: 80px
-
-        @include md
-            font-size: 1.7em
 
     .botao
         height: 180px
@@ -130,7 +64,7 @@
         .hello
             height: 60%
             font-size: 1.5em
-            font-weight: 300
+            font-weight: bold
 
         .message
             height: 30%
@@ -183,5 +117,5 @@
                 margin-bottom: 30px
 
             &.cursor
-                animation: cursor .8s linear infinite, typing 2s ease, pisca .1s 4s ease, pisca .1s 4.1s ease, pisca .1s 5.5s ease, pisca .1s 5.6s ease, pisca 1.6s 6.2s linear
+                animation: cursor .8s linear infinite, typing 2s ease, pisca .1s 3s ease, pisca .1s 3.1s ease, pisca .1s 4.5s ease, pisca .1s 5.6s ease, pisca 1.6s 7.2s linear
                 animation-timing-function: steps(11, end)

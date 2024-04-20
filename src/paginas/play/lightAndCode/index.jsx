@@ -42,7 +42,7 @@ export default function Light_and_code() {
 
     return (
         <div className="light">
-            {escreve ? <p className="hello cursor">HELLO WORLD!</p> : null}
+            {escreve ? <p className="hello cursor">LIGHTS PLAY</p> : null}
         </div>
     );
 }
