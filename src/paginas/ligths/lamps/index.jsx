@@ -39,23 +39,10 @@ export default function Lamps(props) {
             await HandleLamp(props.fase[i], true);
         }
         setInPreview(false);
+        props.setPause(false);
     }
 
     const HandleLamp = async (index, p = false) => {
-        setLamps((prevState) => {
-            const newState = [...prevState];
-            newState[index] = true;
-            return newState;
-        });
-
-        await delay(450);
-
-        setLamps((prevState) => {
-            const newState = [...prevState];
-            newState[index] = false;
-            return newState;
-        });
-
         if (!p) {
             if (index === props.fase[clicks.length]) {
                 setClicks((prevState) => {
@@ -63,9 +50,27 @@ export default function Lamps(props) {
                     return newState;
                 });
             } else {
-                console.log('over')
+                setInPreview(false);
+                setClicks([]);
+                props.setOver(true);
             }
         }
+
+        await delay(60);
+
+        setLamps((prevState) => {
+            const newState = [...prevState];
+            newState[index] = true;
+            return newState;
+        });
+
+        await delay(500);
+
+        setLamps((prevState) => {
+            const newState = [...prevState];
+            newState[index] = false;
+            return newState;
+        });
 
     };
 
@@ -76,7 +81,7 @@ export default function Lamps(props) {
     const LampGem = () => {
         const list = [];
         for (let i = 0; i < lamps.length; i++) {
-            let item = <Lamp key={i} index={i} setLamps={HandleLamp} lamps={lamps} cant={inPreview} />;
+            let item = <Lamp key={i} index={i} setLamps={HandleLamp} lamps={lamps} cant={inPreview} pause={props.pause}/>;
             list.push(item);
         }
 
@@ -90,12 +95,16 @@ export default function Lamps(props) {
     }, [props.fase])
 
     useEffect(() => {
-        if (clicks.length === props.fase.length && clicks.every((value, index) => value === props.fase[index])) {
-            setClicks([])
-            props.ScoreIncrement(clicks.length);
+        if (clicks.length === props.fase.length && clicks.every((value, index) => value === props.fase[index]) && props.fase.length !== 0) {
+            props.setPause(true);
+            setTimeout(() => {
+                setClicks([]);
+                props.ScoreIncrement(clicks.length);
+            }, 1000);
         }
     }, [clicks, props.fase]);
     
+
 
     return (
         <div className="lamps">

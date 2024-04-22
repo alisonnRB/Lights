@@ -98,6 +98,50 @@
         top: 20px
         right: 20px
 
+    .card-content
+        height: 100vh
+        width: 100vw
+        position: fixed
+        top: 0
+        left: 0
+        @include center
+        background: #00000094
+        
+
+        .card
+            height: 400px
+            width: 600px
+            background: white
+            display: flex
+            flex-direction: column
+            @include center
+            border-radius: 20px
+            
+
+            span
+                height: 60%
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: space-evenly
+                
+
+                h2
+                    font-weight: bold
+
+            button
+                width: 40%
+                border: none
+                background: black
+                padding: 10px
+                padding-left: 30px
+                padding-right: 30px
+                @include center
+                border-radius: 10px
+                color: white
+                cursor: pointer
+                
+
     .lampsContent
         position: absolute
         top: 0

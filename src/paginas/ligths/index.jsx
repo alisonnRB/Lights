@@ -5,15 +5,19 @@ import words from './language.json';
 
 import Rope from './rope/index';
 import Lamps from "./lamps";
+import Over from './gameOver/index';
 
 export default function MySkills() {
     const { language } = useContext(LanguageContext);
     const [open, setOpen] = useState(false);
     const [action, setAction] = useState(false);
     const [start, setStart] = useState(false);
+    const [pause, setPause] = useState(false);
 
     const [fase, setFase] = useState([]);
     const [score, setScore] = useState(0);
+
+    const [over, setOver] = useState(false);
 
     const geraLevel = () => {
         const list = [];
@@ -29,6 +33,14 @@ export default function MySkills() {
     const ScoreIncrement = (num) => {
         setScore((prevState) => prevState + num);
         geraLevel();
+    }
+
+    const clear = () => {
+        setScore(0);
+        setFase([]);
+        setStart(false);
+        setAction(false);
+        setOver(false);
     }
 
     useEffect(() => {
@@ -58,11 +70,11 @@ export default function MySkills() {
             <>
                 <Rope action={action} setAction={setAction} />
                 {!start ? <p className={`instruction turn`}>{words[language].first_hint}</p> : null}
-                {start ? <p className={`instruction turn`}>{words[language].pause}</p> : null}
             </>
 
             <div className="lampsContent">
-                <Lamps fase={fase} ScoreIncrement={ScoreIncrement}/>
+                {over ? <Over score={score} clear={clear}/> : null}
+                <Lamps fase={fase} ScoreIncrement={ScoreIncrement} setOver={setOver} pause={pause} setPause={setPause}/>
             </div>
         </div>
     );
