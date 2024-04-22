@@ -16,14 +16,3 @@ $light-of-lamp: ( "top-left": -10px -10px 25px 10px, "top-center": 0px -10px 25p
     width: 100vw
     background-color: black
     animation: $animation $time $type $case
-
-@mixin lamps($color, $position, $delay)
-    $color-opacity: rgba($color, .4)
-    $lightness: map-get($light-of-lamp, $position)
-
-    box-shadow: 0px 0px 8vw 4vw $color-opacity, inset 0px 0px 100px 10px $color-opacity, inset $lightness #ffffffbe
-    transition: all 1s $delay ease
-    background-color: $color
-
-    @include xs
-        box-shadow: 0px 0px 40vw 10vw $color-opacity, inset 0px 0px 100px 10px $color-opacity, inset $lightness #ffffffbe

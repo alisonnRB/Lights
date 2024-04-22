@@ -5,7 +5,7 @@
 .mySkills
     height: 100vh
     width: 100vw
-    background-color: #241f1f
+    background-color: #0e0c0c
     box-shadow: inset 0px 0px 100px 50px black
 
     .light
@@ -13,7 +13,6 @@
 
         &.turn
             animation: apaga 1s linear
-
 
     .content-rope
         position: absolute
@@ -94,8 +93,12 @@
         &.turn
             animation: hint-hiden 1s ease reverse
 
+    .score
+        position: absolute
+        top: 20px
+        right: 20px
+
     .lampsContent
-        background: pink
         position: absolute
         top: 0
         height: 100%
@@ -106,6 +109,23 @@
         padding-bottom: 30px
 
         .lamps
-            background: orange
+            border: 2px solid white
             height: 85%
             width: 70%
+            padding: 20px
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-wrap: wrap
+
+            .lamp
+                height: 100px
+                width: 100px
+                border: 1px solid #ffffff77
+                border-radius: 50%
+                transition: all ease .2s
+                margin-right: 100px
+
+                &.on
+                    border: 1px solid #ffffff
+                    box-shadow: 0px 0px 50px 25px #00ccffd7, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #00ccffd7, inset 0px 0px 100px 2px #ffffffd7

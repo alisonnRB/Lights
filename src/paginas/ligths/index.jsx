@@ -12,6 +12,25 @@ export default function MySkills() {
     const [action, setAction] = useState(false);
     const [start, setStart] = useState(false);
 
+    const [fase, setFase] = useState([]);
+    const [score, setScore] = useState(0);
+
+    const geraLevel = () => {
+        const list = [];
+
+        for (let i = 0; i < (score !== 0 ? score : 2); i++) {
+            let randomNumber = Math.floor(Math.random() * 24);
+            list.push(randomNumber);
+        }
+
+        setFase(list);
+    }
+
+    const ScoreIncrement = (num) => {
+        setScore((prevState) => prevState + num);
+        geraLevel();
+    }
+
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setOpen(true);
@@ -20,16 +39,22 @@ export default function MySkills() {
         return () => clearTimeout(timeoutId);
     }, [])
 
-    useEffect(()=>{
-        if(action){
-            setStart((prevState)=>!prevState);
+    useEffect(() => {
+        if (action) {
+            setStart((prevState) => !prevState);
         }
-    },[action])
+    }, [action])
+
+    useEffect(() => {
+        if (start) {
+            geraLevel();
+        }
+    }, [start])
 
     return (
         <div className="mySkills">
             {!open ? <div className={`light`}></div> : null}
-
+            <p className="score">Score: {score}</p>
             <>
                 <Rope action={action} setAction={setAction} />
                 {!start ? <p className={`instruction turn`}>{words[language].first_hint}</p> : null}
@@ -37,7 +62,7 @@ export default function MySkills() {
             </>
 
             <div className="lampsContent">
-                <Lamps />
+                <Lamps fase={fase} ScoreIncrement={ScoreIncrement}/>
             </div>
         </div>
     );
