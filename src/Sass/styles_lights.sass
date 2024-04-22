@@ -2,6 +2,9 @@
 @import './_animation'
 @import './_breakpoints'
 
+$lamp-colors: (#FF5733,#C70039,#900C3F,#581845,#9B59B6,#8E44AD,#2980B9,#3498DB,#1ABC9C,#16A085,#27AE60,#2ECC71,#F1C40F,#F39C12,#D35400, #E74C3C,#8E44AD,#9B59B6,#16A085,#27AE60,#2ECC71,#F1C40F,#F39C12,#D35400, #F5DEB3)
+
+
 .mySkills
     height: 100vh
     width: 100vw
@@ -106,7 +109,6 @@
         left: 0
         @include center
         background: #00000094
-        
 
         .card
             height: 400px
@@ -116,7 +118,6 @@
             flex-direction: column
             @include center
             border-radius: 20px
-            
 
             span
                 height: 60%
@@ -124,7 +125,6 @@
                 flex-direction: column
                 align-items: center
                 justify-content: space-evenly
-                
 
                 h2
                     font-weight: bold
@@ -140,7 +140,6 @@
                 border-radius: 10px
                 color: white
                 cursor: pointer
-                
 
     .lampsContent
         position: absolute
@@ -153,9 +152,8 @@
         padding-bottom: 30px
 
         .lamps
-            border: 2px solid white
             height: 85%
-            width: 70%
+            width: 50%
             padding: 20px
             display: flex
             align-items: center
@@ -170,6 +168,6 @@
                 transition: all ease .2s
                 margin-right: 100px
 
-                &.on
-                    border: 1px solid #ffffff
-                    box-shadow: 0px 0px 50px 25px #00ccffd7, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #00ccffd7, inset 0px 0px 100px 2px #ffffffd7
+                @for $i from 0 through 23
+                    &.on.lamp-#{$i}
+                        @include shadow($color: nth($lamp-colors, $i + 1))

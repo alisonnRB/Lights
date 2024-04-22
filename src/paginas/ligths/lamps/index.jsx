@@ -22,14 +22,6 @@ export default function Lamps(props) {
             false,
             false,
             false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
         ]
     )
 
@@ -81,7 +73,7 @@ export default function Lamps(props) {
     const LampGem = () => {
         const list = [];
         for (let i = 0; i < lamps.length; i++) {
-            let item = <Lamp key={i} index={i} setLamps={HandleLamp} lamps={lamps} cant={inPreview} pause={props.pause}/>;
+            let item = <Lamp key={i} index={i} setLamps={HandleLamp} lamps={lamps} cant={inPreview} pause={props.pause} start={props.fase}/>;
             list.push(item);
         }
 

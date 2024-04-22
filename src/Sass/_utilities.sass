@@ -16,3 +16,7 @@ $light-of-lamp: ( "top-left": -10px -10px 25px 10px, "top-center": 0px -10px 25p
     width: 100vw
     background-color: black
     animation: $animation $time $type $case
+
+@mixin shadow($color)
+    border: 1px solid #ffffff
+    box-shadow: 0px 0px 50px 25px $color, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px $color, inset 0px 0px 100px 2px #ffffffd7

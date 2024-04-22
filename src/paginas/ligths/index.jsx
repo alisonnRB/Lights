@@ -23,7 +23,7 @@ export default function MySkills() {
         const list = [];
 
         for (let i = 0; i < (score !== 0 ? score : 2); i++) {
-            let randomNumber = Math.floor(Math.random() * 24);
+            let randomNumber = Math.floor(Math.random() * 16);
             list.push(randomNumber);
         }
 
