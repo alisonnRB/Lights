@@ -91,7 +91,7 @@ export default function Lamps(props) {
             props.setPause(true);
             setTimeout(() => {
                 setClicks([]);
-                props.ScoreIncrement(clicks.length);
+                props.ScoreIncrement(20);
             }, 1000);
         }
     }, [clicks, props.fase]);

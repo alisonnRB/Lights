@@ -18,11 +18,37 @@ export default function MySkills() {
     const [score, setScore] = useState(0);
 
     const [over, setOver] = useState(false);
+    const dificuldade = [2, 4, 6, 8, 10, 11, 12, 13, 14, 15, 16, 20]
 
     const geraLevel = () => {
         const list = [];
+        let def;
 
-        for (let i = 0; i < (score !== 0 ? score : 2); i++) {
+        if (score > 1200) {
+            def = dificuldade[10];
+        } else if (score >= 900) {
+            def = dificuldade[9];
+        } else if (score >= 800) {
+            def = dificuldade[8];
+        } else if (score >= 600) {
+            def = dificuldade[7];
+        } else if (score >= 400) {
+            def = dificuldade[6];
+        } else if (score >= 200) {
+            def = dificuldade[5];
+        } else if (score >= 150) {
+            def = dificuldade[4];
+        } else if (score >= 100) {
+            def = dificuldade[3];
+        } else if (score >= 50) {
+            def = dificuldade[2];
+        } else if (score >= 10) {
+            def = dificuldade[1];
+        } else{
+            def = dificuldade[0];
+        }
+
+        for (let i = 0; i < def; i++) {
             let randomNumber = Math.floor(Math.random() * 16);
             list.push(randomNumber);
         }
@@ -73,8 +99,8 @@ export default function MySkills() {
             </>
 
             <div className="lampsContent">
-                {over ? <Over score={score} clear={clear}/> : null}
-                <Lamps fase={fase} ScoreIncrement={ScoreIncrement} setOver={setOver} pause={pause} setPause={setPause}/>
+                {over ? <Over score={score} clear={clear} /> : null}
+                <Lamps fase={fase} ScoreIncrement={ScoreIncrement} setOver={setOver} pause={pause} setPause={setPause} />
             </div>
         </div>
     );

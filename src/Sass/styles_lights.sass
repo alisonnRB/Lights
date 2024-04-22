@@ -2,8 +2,7 @@
 @import './_animation'
 @import './_breakpoints'
 
-$lamp-colors: (#FF5733,#C70039,#900C3F,#581845,#9B59B6,#8E44AD,#2980B9,#3498DB,#1ABC9C,#16A085,#27AE60,#2ECC71,#F1C40F,#F39C12,#D35400, #E74C3C,#8E44AD,#9B59B6,#16A085,#27AE60,#2ECC71,#F1C40F,#F39C12,#D35400, #F5DEB3)
-
+$lamp-colors: (#C70039,#900C3F,#581845,#8E44AD,#2980B9,#1ABC9C,#27AE60,#F1C40F,#D35400, #E74C3C,#9B59B6,#16A085,#2ECC71,#F1C40F,#F39C12,#D35400, #F5DEB3)
 
 .mySkills
     height: 100vh
@@ -100,11 +99,13 @@ $lamp-colors: (#FF5733,#C70039,#900C3F,#581845,#9B59B6,#8E44AD,#2980B9,#3498DB,#
         position: absolute
         top: 20px
         right: 20px
+        color: white
 
     .card-content
         height: 100vh
         width: 100vw
         position: fixed
+        z-index: 100
         top: 0
         left: 0
         @include center
@@ -147,27 +148,42 @@ $lamp-colors: (#FF5733,#C70039,#900C3F,#581845,#9B59B6,#8E44AD,#2980B9,#3498DB,#
         height: 100%
         width: 100%
         display: flex
-        align-items: flex-end
+        align-items: center
         justify-content: center
-        padding-bottom: 30px
+        margin-top: 20px
 
         .lamps
-            height: 85%
-            width: 50%
-            padding: 20px
+            height: 80%
+            width: 55%
+            padding: 100px
             display: flex
             align-items: center
             justify-content: center
             flex-wrap: wrap
 
+
             .lamp
+                position: relative
                 height: 100px
                 width: 100px
                 border: 1px solid #ffffff77
                 border-radius: 50%
-                transition: all ease .2s
-                margin-right: 100px
+                margin-right: 70px
+                cursor: pointer
 
-                @for $i from 0 through 23
+                &::after
+                    content: ''
+                    position: absolute
+                    top: 0
+                    left: 0
+                    height: 100%
+                    width: 100%
+                    border: 1px solid #ffffff77
+                    background: #ffffff13
+                    border-radius: 50%
+                    cursor: pointer
+                    box-shadow: inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000
+
+                @for $i from 0 through 15
                     &.on.lamp-#{$i}
                         @include shadow($color: nth($lamp-colors, $i + 1))

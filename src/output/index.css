@@ -485,11 +485,13 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  color: white;
 }
 .mySkills .card-content {
   height: 100vh;
   width: 100vw;
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   display: flex;
@@ -538,122 +540,136 @@
   height: 100%;
   width: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 30px;
+  margin-top: 20px;
 }
 .mySkills .lampsContent .lamps {
-  height: 85%;
-  width: 50%;
-  padding: 20px;
+  height: 80%;
+  width: 55%;
+  padding: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 .mySkills .lampsContent .lamps .lamp {
+  position: relative;
   height: 100px;
   width: 100px;
   border: 1px solid rgba(255, 255, 255, 0.4666666667);
   border-radius: 50%;
-  transition: all ease 0.2s;
-  margin-right: 100px;
+  margin-right: 70px;
+  cursor: pointer;
+}
+.mySkills .lampsContent .lamps .lamp::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.4666666667);
+  background: rgba(255, 255, 255, 0.0745098039);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-0 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #FF5733, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #FF5733, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #d1003c;
+  box-shadow: 0px 0px 50px 25px #C70039, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-1 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #C70039, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #C70039, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #990d43;
+  box-shadow: 0px 0px 50px 25px #900C3F, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-2 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #900C3F, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #900C3F, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #601a4b;
+  box-shadow: 0px 0px 50px 25px #581845, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-3 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #581845, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #581845, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #9447b4;
+  box-shadow: 0px 0px 50px 25px #8E44AD, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-4 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #9B59B6, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #9B59B6, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #2b86c1;
+  box-shadow: 0px 0px 50px 25px #2980B9, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-5 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #8E44AD, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #8E44AD, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #1bc5a3;
+  box-shadow: 0px 0px 50px 25px #1ABC9C, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-6 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #2980B9, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #2980B9, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #29b665;
+  box-shadow: 0px 0px 50px 25px #27AE60, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-7 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #3498DB, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #3498DB, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #f2c619;
+  box-shadow: 0px 0px 50px 25px #F1C40F, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-8 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #1ABC9C, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #1ABC9C, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #dd5800;
+  box-shadow: 0px 0px 50px 25px #D35400, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-9 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #16A085, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #16A085, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #e85445;
+  box-shadow: 0px 0px 50px 25px #E74C3C, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-10 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #27AE60, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #27AE60, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #9f60b9;
+  box-shadow: 0px 0px 50px 25px #9B59B6, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-11 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #2ECC71, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #2ECC71, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #17a98c;
+  box-shadow: 0px 0px 50px 25px #16A085, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-12 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #F1C40F, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #F1C40F, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #33d176;
+  box-shadow: 0px 0px 50px 25px #2ECC71, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-13 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #F39C12, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #F39C12, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #f2c619;
+  box-shadow: 0px 0px 50px 25px #F1C40F, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-14 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #D35400, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #D35400, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #f3a01c;
+  box-shadow: 0px 0px 50px 25px #F39C12, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 .mySkills .lampsContent .lamps .lamp.on.lamp-15 {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #E74C3C, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #E74C3C, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
-}
-.mySkills .lampsContent .lamps .lamp.on.lamp-16 {
-  border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #8E44AD, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #8E44AD, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
-}
-.mySkills .lampsContent .lamps .lamp.on.lamp-17 {
-  border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #9B59B6, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #9B59B6, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
-}
-.mySkills .lampsContent .lamps .lamp.on.lamp-18 {
-  border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #16A085, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #16A085, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
-}
-.mySkills .lampsContent .lamps .lamp.on.lamp-19 {
-  border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #27AE60, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #27AE60, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
-}
-.mySkills .lampsContent .lamps .lamp.on.lamp-20 {
-  border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #2ECC71, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #2ECC71, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
-}
-.mySkills .lampsContent .lamps .lamp.on.lamp-21 {
-  border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #F1C40F, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #F1C40F, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
-}
-.mySkills .lampsContent .lamps .lamp.on.lamp-22 {
-  border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #F39C12, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #F39C12, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
-}
-.mySkills .lampsContent .lamps .lamp.on.lamp-23 {
-  border: 1px solid #ffffff;
-  box-shadow: 0px 0px 50px 25px #D35400, 0px 0px 30px 10px #ffffff, inset 0px 0px 20px 10px #D35400, inset 0px 0px 100px 2px rgba(255, 255, 255, 0.8431372549);
+  transition: all linear 0.2s;
+  background: #dd5800;
+  box-shadow: 0px 0px 50px 25px #D35400, 0px 0px 30px 10px #ffffff, inset -2px 2px 5px 0px #FFF, inset 2px -2px 5px 0px #000;
 }
 
 * {
