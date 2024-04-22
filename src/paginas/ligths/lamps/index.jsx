@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Lamp from "../lamp";
 
+import doS from "../../../assets/do.mp3";
+
 export default function Lamps(props) {
     const [inPreview, setInPreview] = useState(false);
     const [clicks, setClicks] = useState([]);
@@ -24,6 +26,9 @@ export default function Lamps(props) {
             false,
         ]
     )
+    const sound = [
+        new Audio(doS),
+    ]
 
     const LevelPreview = async () => {
         setInPreview(true);
@@ -56,6 +61,7 @@ export default function Lamps(props) {
             return newState;
         });
 
+        sound[0].play();
         await delay(500);
 
         setLamps((prevState) => {
