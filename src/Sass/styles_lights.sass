@@ -148,19 +148,28 @@ $lamp-colors: (#C70039,#900C3F,#581845,#8E44AD,#2980B9,#1ABC9C,#27AE60,#F1C40F,#
         height: 100%
         width: 100%
         display: flex
-        align-items: center
+        align-items: flex-end
         justify-content: center
         margin-top: 20px
 
         .lamps
             height: 80%
-            width: 55%
-            padding: 100px
-            display: flex
-            align-items: center
-            justify-content: center
-            flex-wrap: wrap
+            width: 50%
+            padding: 60px
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-template-rows: repeat(4, 1fr)
+            gap: 10px
+            margin: 0 auto
 
+            @include md
+                width: 100vw
+
+            @include sm
+                width: 100vw
+
+            @include xs
+                width: 100vw
 
             .lamp
                 position: relative
@@ -168,8 +177,19 @@ $lamp-colors: (#C70039,#900C3F,#581845,#8E44AD,#2980B9,#1ABC9C,#27AE60,#F1C40F,#
                 width: 100px
                 border: 1px solid #ffffff77
                 border-radius: 50%
-                margin-right: 70px
                 cursor: pointer
+
+                @include md
+                    height: 80px
+                    width: 80px
+
+                @include sm
+                    height: 65px
+                    width: 65px
+
+                @include xs
+                    height: 50px
+                    width: 50px
 
                 &::after
                     content: ''
